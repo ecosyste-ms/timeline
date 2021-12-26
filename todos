@@ -1,0 +1,5 @@
+- events controller
+- cron job to import new events on an hourly basis
+- create indexes after initial import 
+- check size of db
+  - SELECT pg_size_pretty (pg_total_relation_size ('events'));
