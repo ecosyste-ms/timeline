@@ -18,7 +18,7 @@ class Event < ApplicationRecord
     end
 
     gz =  URI.open(url)
-    Event.import_batch(gz)
+    Event.import_batch(gz, filename)
   end
 
   def self.import_from_file(filepath)
@@ -29,10 +29,10 @@ class Event < ApplicationRecord
       return 
     end
     gz =  File.open(filepath)
-    Event.import_batch(gz)
+    Event.import_batch(gz, filename)
   end
 
-  def self.import_batch(gz)
+  def self.import_batch(gz, filename)
     starts = Time.now
     js = Zlib::GzipReader.new(gz).read
     batch_size = 2000
