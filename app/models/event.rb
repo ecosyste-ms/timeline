@@ -42,12 +42,12 @@ class Event < ApplicationRecord
       events << Event.format_event(event_json)
       if events.length >= batch_size
         count += 1
-        Event.insert_all(events)
+        Event.insert_all(events) if events.any?
         events = []
       end
     end
     count = (count*batch_size) + events.length
-    Event.insert_all(events)
+    Event.insert_all(events) if events.any?
     ends = Time.now
     puts "Finished: #{ends - starts} seconds"
     Import.create(filename: filename, event_count: count)
