@@ -3,7 +3,7 @@ class Event < ApplicationRecord
     starts = Time.now
     Dir["#{folder_path}/*.json.gz"].each do |path|
       puts "Importing #{path}"
-      Event.import_batch(path)
+      Event.import_from_file(path)
     end
     ends = Time.now
     puts "Finished all: #{ends - starts} seconds"
