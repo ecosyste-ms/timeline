@@ -29,7 +29,7 @@ class Event < ApplicationRecord
       return 
     end
     gz =  File.open(filepath)
-    Event.import_batch(gz) 
+    Event.import_batch(gz)
   end
 
   def self.import_batch(gz)
