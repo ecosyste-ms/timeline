@@ -9,6 +9,7 @@ gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
 gem 'pagy'
+gem 'whenever'
 
 group :development do
   gem "capistrano", require: false

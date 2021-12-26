@@ -21,11 +21,6 @@ append :linked_files, 'config/database.yml', 'config/secrets.yml'
 # Skip migration if files in db/migrate were not modified
 set :conditionally_migrate, true
 
-# Defaults to nil (no asset cleanup is performed)
-# If you use Rails 4+ and you'd like to clean up old assets after each deploy,
-# set this to the number of versions to keep
-set :keep_assets, 5
-
 set :keep_releases, 5
 
 set :migration_role, :app

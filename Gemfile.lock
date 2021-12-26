@@ -89,6 +89,7 @@ GEM
       capistrano (~> 3.7)
       capistrano-bundler
       puma (>= 4.0, < 6.0)
+    chronic (0.10.2)
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
     crass (1.0.6)
@@ -172,6 +173,8 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
     zeitwerk (2.5.1)
 
 PLATFORMS
@@ -193,6 +196,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.0)
   sql_queries_count
+  whenever
 
 RUBY VERSION
    ruby 3.0.3p157
