@@ -30,6 +30,8 @@ class Event < ApplicationRecord
     end
     gz =  File.open(filepath)
     Event.import_batch(gz, filename)
+    gz.close unless gz.nil? or gz.closed?
+    File.delete(filepath) if File.exist?(filepath)
   end
 
   def self.import_batch(gz, filename)
