@@ -40,19 +40,23 @@ class Event < ApplicationRecord
     batch_size = 2000
     events = []
     count = 0
-    Oj.load(js) do |event_json|
-      events << Event.format_event(event_json)
-      if events.length >= batch_size
-        count += 1
-        Event.insert_all(events) if events.any?
-        events = []
+    begin
+      Oj.load(js) do |event_json|
+        events << Event.format_event(event_json)
+        if events.length >= batch_size
+          count += 1
+          Event.insert_all(events) if events.any?
+          events = []
+        end
       end
+      count = (count*batch_size) + events.length
+      Event.insert_all(events) if events.any?
+      ends = Time.now
+      puts "Finished: #{ends - starts} seconds"
+      Import.create(filename: filename, event_count: count)
+    rescue Oj::ParseError
+      puts "Invalid JSON in #{filename}"
     end
-    count = (count*batch_size) + events.length
-    Event.insert_all(events) if events.any?
-    ends = Time.now
-    puts "Finished: #{ends - starts} seconds"
-    Import.create(filename: filename, event_count: count)
   end
 
   def self.format_event(event_json)
