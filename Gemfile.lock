@@ -99,6 +99,7 @@ GEM
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
     crass (1.0.6)
+    date (3.2.2)
     digest (3.1.0)
     erubi (1.10.0)
     globalid (1.0.0)
@@ -143,6 +144,10 @@ GEM
     nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     oj (3.13.11)
+    open-uri (0.2.0)
+      stringio
+      time
+      uri
     pagy (5.9.1)
       activesupport
     pg (1.3.0)
@@ -191,11 +196,15 @@ GEM
       net-ssh (>= 2.8.0)
     sshkit-interactive (0.3.0)
       sshkit (~> 1.12)
+    stringio (3.0.1)
     strscan (3.0.1)
     thor (1.2.1)
+    time (0.2.0)
+      date
     timeout (0.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uri (0.11.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -217,6 +226,7 @@ DEPENDENCIES
   capistrano3-puma
   jbuilder
   oj
+  open-uri
   pagy
   pg (~> 1.1)
   puma (= 4.3.6)

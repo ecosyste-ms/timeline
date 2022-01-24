@@ -9,7 +9,8 @@ gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
 gem 'pagy'
-gem 'whenever'
+gem 'whenever', require: false
+gem 'open-uri'
 
 group :development do
   gem "capistrano", require: false

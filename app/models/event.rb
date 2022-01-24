@@ -70,4 +70,23 @@ class Event < ApplicationRecord
       created_at: event_json['created_at']
     }
   end
+
+  def self.download_last_day
+    start_time = 1.day.ago
+    end_time = Time.now
+    hours = []
+    
+    while start_time <= end_time
+      hours.push({year: start_time.year, month: start_time.month, day: start_time.day, hour: start_time.hour})
+      start_time += 1.hour
+    end
+
+    urls = hours.map do |hour|
+      "https://data.gharchive.org/#{hour[:year]}-#{hour[:month].to_s.rjust(2, "0")}-#{hour[:day].to_s.rjust(2, "0")}-#{hour[:hour]}.json.gz"
+    end
+
+    urls.each do |url|
+      import_from_url(url)
+    end
+  end
 end
