@@ -13,9 +13,9 @@
       <%= event.action_text %>
 
       <% if params[:id].present? %>
-        <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank %>
+        <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank, class: 'text-break' %>
       <% else %>
-        <%= link_to event.repository, "/events/#{event.repository}" %>
+        <%= link_to event.repository, "/events/#{event.repository}", class: 'text-break' %>
       <% end %>
       
       <small class='text-muted' title="<%= event.created_at %>">
