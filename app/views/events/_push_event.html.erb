@@ -1,0 +1,14 @@
+<ul>
+  <% event.payload['commits'].each do |commit| %>
+    <li>
+      <%= truncate commit['message'], length: 120 %> <small class='text-muted'><%= commit['sha'][0..6] %></small>
+    </li>
+  <% end %>
+  <% if event.payload['commits'].length != event.payload['size'] %>
+    <li>and <%= event.payload['size'] - event.payload['commits'].length %> more ...</li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to 'View on GitHub', "https://github.com/#{event.repository}/commits/#{event.payload['ref'].gsub("refs/heads/", '')}" %>
+</p>

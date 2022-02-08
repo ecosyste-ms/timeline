@@ -1,0 +1,25 @@
+<div class="card mb-3 event">
+  <div class="card-body pb-1">
+    <%= link_to "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: 'float-end' do %>
+      <img src="https://github.com/<%= event.actor.gsub('[bot]', '') %>.png" class="rounded" height='40' width='40'>
+    <% end %>
+    <h5 class="card-title">
+      <span class='me-1' title='<%= event_name(event.event_type) %>'>
+        <%= octicon(event_icon(event), height: 18) %>
+      </span>
+
+      <%= link_to event.actor, "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank %>
+
+      <%= event.action_text %>
+
+      <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank %>
+      
+      <small class='text-muted'>
+        <%= distance_of_time_in_words_to_now event.created_at %> ago
+      </small>
+    </h5>
+    <div class="ms-4">
+      <%= render partial: "events/#{event.event_type.underscore}", locals: {event: event}  %>
+    </div>
+  </div>
+</div>

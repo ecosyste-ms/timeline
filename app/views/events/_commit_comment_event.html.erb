@@ -1,0 +1,5 @@
+<%= truncate event.payload['comment']['body'], length: 200  %>
+
+<p>
+  <%= link_to 'View on GitHub', event.payload['comment']['html_url'], target: :_blank %>
+</p>

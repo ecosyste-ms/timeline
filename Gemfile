@@ -12,7 +12,8 @@ gem 'pagy'
 gem 'whenever', require: false
 gem 'open-uri'
 gem 'bootstrap', '~> 5.1.3'
-gem "chartkick"
+gem 'chartkick'
+gem 'octicons_helper'
 
 group :development do
   gem "capistrano", require: false
