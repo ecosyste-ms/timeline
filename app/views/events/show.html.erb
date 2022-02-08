@@ -1,5 +1,16 @@
 <div class="px-4 pt-5 my-5 text-center">
-  <h1 class="display-5 fw-bold">GH Timeline: <%= link_to @repository, "https://github.com/#{@repository}", target: :_blank %></h1>
+  <h1 class="display-5 fw-bold">
+    <a href="/" class="text-decoration-none link-dark">GH Timeline</a>
+  </h1>
+
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Browse the timeline of events for any open soruce repository on GitHub all the way back to 2015. Data updated on an hourly basis from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
+  </div>
+
+  <h1 class="display-5 fw-bold">
+    <img src="https://github.com/<%= @repository.split('/').first %>.png" class="rounded inline-block me-2" height='40' width='40' onerror="this.style.display='none'">
+    <%= link_to @repository, "https://github.com/#{@repository}", target: :_blank %>
+  </h1>
 </div>
 
 <% if @events.any? %>
@@ -7,9 +18,11 @@
     <%= render @events %>
   </div>
 
-  <div class="px-4 my-5 text-center">
-    <a href="<%= url_for(before: @events.last.id) %>" class="btn btn-primary btn-lg px-4 gap-3">Next</a>
-  </div>
+  <% if @events.length == 30 %>
+    <div class="px-4 my-5 text-center">
+      <a href="<%= url_for(before: @events.last.id) %>" class="btn btn-primary btn-lg px-4 gap-3">Next</a>
+    </div>
+  <% end %>
 <% else %>
   <div class="px-4 my-5 text-center">
     No more events found
