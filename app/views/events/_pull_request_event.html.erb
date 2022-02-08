@@ -1,7 +1,7 @@
-<h5>
+<h6>
   <%= link_to event.payload['pull_request']['html_url'], target: :_blank do %>
     <%= event.payload['pull_request']['title'] %>
   <% end %>
-</h5>
+</h6>
 
 <%= truncate event.payload['pull_request']['body'], length: 200 %>

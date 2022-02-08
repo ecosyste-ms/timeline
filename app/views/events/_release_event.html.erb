@@ -1,5 +1,5 @@
-<h5>
+<h6>
   <%= link_to event.payload['release']['name'], event.payload['release']['html_url'], target: :_blank %>
-</h5>
+</h6>
 
 <%= truncate  event.payload['release']['body'], length: 200 %>
