@@ -1,3 +1,6 @@
 <p>
-  <%= link_to event.payload['ref'], "https://github.com/#{event.repository}/tree/#{event.payload['ref']}", target: :_blank %> - <%= event.payload['description'] %>
+  <%= link_to event.payload['ref'], "https://github.com/#{event.repository}/tree/#{event.payload['ref']}", target: :_blank %>
+  <% if event.payload['description'].present? %>
+    - <%= event.payload['description'] %>
+  <% end %>
 </p>
