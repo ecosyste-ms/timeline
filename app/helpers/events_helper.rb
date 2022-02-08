@@ -4,7 +4,12 @@ module EventsHelper
     when 'WatchEvent'
       'star-fill'
     when "CreateEvent"
+      case event.payload['ref_type']
+      when 'tag'
+        'tag'
+      else
       'git-branch'
+      end
     when "CommitCommentEvent"
       'git-commit'
     when "ReleaseEvent"
@@ -41,6 +46,8 @@ module EventsHelper
       'repo-forked'
     when 'MemberEvent'
       'person-add'
+    else
+      nil
     end
   end
 
