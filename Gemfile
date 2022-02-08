@@ -11,6 +11,8 @@ gem 'oj'
 gem 'pagy'
 gem 'whenever', require: false
 gem 'open-uri'
+gem 'bootstrap', '~> 5.1.3'
+gem "chartkick"
 
 group :development do
   gem "capistrano", require: false

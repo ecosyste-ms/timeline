@@ -1,0 +1,9 @@
+<h1 class="visually-hidden">Heroes examples</h1>
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">GitHub Timeline</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Browse the timeline of events for any open soruce repository on GitHub all the way back to 2015. Data updated on an hourly basis from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
+  </div>
+  <%= line_chart @imports, thousands: "," %>
+</div>

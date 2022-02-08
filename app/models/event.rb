@@ -17,8 +17,13 @@ class Event < ApplicationRecord
       return 
     end
 
-    gz =  URI.open(url)
-    Event.import_batch(gz, filename)
+    begin
+      gz =  URI.open(url)
+      Event.import_batch(gz, filename)
+    rescue OpenURI::HTTPError => error
+      response = error.io
+      puts response.status
+    end
   end
 
   def self.import_from_file(filepath)
