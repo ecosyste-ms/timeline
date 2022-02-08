@@ -2,15 +2,22 @@ module EventsHelper
   def event_icon(event)
     case event.event_type
     when 'WatchEvent'
-      'star'
+      'star-fill'
     when "CreateEvent"
       'git-branch'
     when "CommitCommentEvent"
-      'comment'
+      'git-commit'
     when "ReleaseEvent"
       'tag'
     when "IssuesEvent"
-      'issue-opened'
+      case event.payload['action']
+      when 'closed'
+        'issue-closed'
+      when 'reopened'
+        'issue-reopened'
+      else
+        'issue-opened'
+      end
     when "DeleteEvent"
       'trash'
     when "IssueCommentEvent"
@@ -24,11 +31,16 @@ module EventsHelper
     when "PullRequestReviewEvent"
       'code-review'
     when "PullRequestEvent"
-      'git-pull-request'
+      case event.payload['action']
+      when 'closed'
+        'git-pull-request-closed'
+      else
+        'git-pull-request'
+      end
     when "ForkEvent"
       'repo-forked'
     when 'MemberEvent'
-      'person'
+      'person-add'
     end
   end
 
@@ -40,11 +52,11 @@ module EventsHelper
     when "CreateEvent"
       'Branched'
     when "CommitCommentEvent"
-      'Commit Comments'
+      'Commit Comment'
     when "ReleaseEvent"
       'Release'
     when "IssuesEvent"
-      'Issues'
+      'Issue'
     when "DeleteEvent"
       'Delete Branch'
     when "IssueCommentEvent"
@@ -54,11 +66,11 @@ module EventsHelper
     when "PushEvent"
       'Pushed'
     when "PullRequestReviewCommentEvent"
-      'Review Comments'
+      'Review Comment'
     when "PullRequestReviewEvent"
       'Review'
     when "PullRequestEvent"
-      'Pull Requests'
+      'Pull Request'
     when "ForkEvent"
       'Forked'
     when 'MemberEvent'
