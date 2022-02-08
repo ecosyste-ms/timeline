@@ -1,10 +1,10 @@
 <div class="card mb-3 event">
   <div class="card-body pb-1">
-    <%= link_to "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: 'float-end' do %>
+    <%= link_to "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: 'float-end ms-2 mb-5' do %>
       <img src="https://github.com/<%= event.actor.gsub('[bot]', '') %>.png" class="rounded" height='40' width='40' onerror="this.style.display='none'">
     <% end %>
     <h5 class="card-title">
-      <span class='me-1' title='<%= event_name(event.event_type) %>'>
+      <span class='me-2 mb-5 float-start' title='<%= event_name(event.event_type) %>'>
         <%= octicon(event_icon(event), height: 18) %>
       </span>
 
