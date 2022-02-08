@@ -14,7 +14,7 @@
 
       <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank %>
       
-      <small class='text-muted'>
+      <small class='text-muted' title="<%= event.created_at %>">
         <%= distance_of_time_in_words_to_now event.created_at %> ago
       </small>
     </h5>
