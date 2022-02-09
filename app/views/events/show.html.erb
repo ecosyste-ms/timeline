@@ -19,12 +19,12 @@
   </div>
 
   <% if @events.length == 30 %>
-    <div class="px-4 my-5 text-center">
+    <div class="px-4 mt-5 text-center">
       <a href="<%= url_for(before: @events.last.id) %>" class="btn btn-primary btn-lg px-4 gap-3">Next</a>
     </div>
   <% end %>
 <% else %>
-  <div class="px-4 my-5 text-center">
+  <div class="px-4 mt-5 text-center">
     No more events found
   </div>
 <% end %>
