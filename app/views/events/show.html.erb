@@ -4,7 +4,7 @@
   </h1>
 
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Browse the timeline of events for any open soruce repository on GitHub all the way back to 2015. Data updated on an hourly basis from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
+    <p class="lead mb-4">Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
   </div>
 
   <h1 class="display-5 fw-bold">

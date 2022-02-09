@@ -10,7 +10,7 @@
       <% end %>
       GH Timeline
     </title>
-    <meta name="description" content="Browse the timeline of events for any open soruce repository on GitHub all the way back to 2015">
+    <meta name="description" content="Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from GH Archive.">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
