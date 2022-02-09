@@ -4,24 +4,24 @@
       <div class="flex-shrink-0" title='<%= event_name(event.event_type) %>'>
         <%= octicon(event_icon(event), height: 18) %>
       </div>
-      <div class="flex-grow-1 ms-3">
+      <div class="flex-grow-1 ms-3 text-break">
         <h5 class='card-title'>
-      <%= link_to event.actor, "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank %>
+          <%= link_to event.actor, "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank %>
 
-      <%= event.action_text %>
+          <%= event.action_text %>
 
-      <% if params[:id].present? %>
-        <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank, class: 'text-break' %>
-      <% else %>
-        <%= link_to event.repository, "/events/#{event.repository}", class: 'text-break' %>
-      <% end %>
+          <% if params[:id].present? %>
+            <%= link_to event.repository, "https://github.com/#{event.repository}", target: :_blank, class: 'text-break' %>
+          <% else %>
+            <%= link_to event.repository, "/events/#{event.repository}", class: 'text-break' %>
+          <% end %>
         </h5>
       
         <h6 class="card-subtitle mb-2 text-muted" title="<%= event.created_at %>">
         <%= distance_of_time_in_words_to_now event.created_at %> ago
         </h6>
 
-      <%= render partial: "events/#{event.event_type.underscore}", locals: {event: event}  %>
+        <%= render partial: "events/#{event.event_type.underscore}", locals: {event: event}  %>
       </div>
       <div class="flex-shrink-0" title='<%= event_name(event.event_type) %>'>
         <%= link_to "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: '' do %>
