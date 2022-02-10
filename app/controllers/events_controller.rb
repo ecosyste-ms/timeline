@@ -3,7 +3,8 @@ class EventsController < ApplicationController
     @repository = params[:id]
     @title = @repository
 
-    # TODO 404 if there are no events for repo at all
+    first_event = Event.where(repository: @repository).first
+    raise ActiveRecord::RecordNotFound if first_event.nil?
 
     @events = Event.where(repository: @repository).order('id DESC').limit(30)
 
