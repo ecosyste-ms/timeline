@@ -8,10 +8,11 @@ class EventsController < ApplicationController
 
     @events = Event.where(repository: @repository).order('id DESC').limit(30)
 
-    start_time = Time.now
-    @events = @events.where('created_at between ? and ?', start_time - 1.month, start_time)
+    @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
+    start_time = @year.beginning_of_year
+    end_time = @year.end_of_year
 
-    # TODO allow paging back before 1 month (maybe by year?)
+    @events = @events.where('created_at between ? and ?', start_time, end_time)
 
     if params[:before]
       @events = @events.where('events.id < ?', params[:before]).order('id DESC')
