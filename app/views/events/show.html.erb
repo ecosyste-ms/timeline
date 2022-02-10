@@ -14,11 +14,11 @@
 </div>
 
 <div class='position-relative mb-3 pb-3'>
-  <div class="dropdown ">
+  <div class="dropdown text-center">
     <button class="btn dropdown-toggle position-absolute top-0 start-50 translate-middle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       <%= @year.year %>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <ul class="dropdown-menu text-center" style='min-width: 82px;'  aria-labelledby="dropdownMenuButton1">
       <% (2015..Time.now.year).reverse_each do |year| %>
         <li><a class="dropdown-item <%= 'active' if year == @year.year %>" href="<%= url_for(year: year, before: nil) %>"><%= year %></a></li>
       <% end %>
