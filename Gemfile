@@ -14,6 +14,7 @@ gem 'open-uri'
 gem 'bootstrap', '~> 5.1.3'
 gem 'chartkick'
 gem 'octicons_helper'
+gem 'local_time'
 
 group :development do
   gem "capistrano", require: false

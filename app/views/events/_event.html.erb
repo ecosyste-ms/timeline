@@ -17,8 +17,8 @@
           <% end %>
         </h5>
       
-        <h6 class="card-subtitle mb-2 text-muted" title="<%= event.created_at %>">
-        <%= distance_of_time_in_words_to_now event.created_at %> ago
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= local_time_ago event.created_at %>
         </h6>
 
         <%= render partial: "events/#{event.event_type.underscore}", locals: {event: event}  %>
