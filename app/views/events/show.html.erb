@@ -33,7 +33,7 @@
 
   <% if @events.length == 30 %>
     <div class="px-4 mt-5 text-center">
-      <a href="<%= url_for(before: @events.last.id, year: @year.year) %>" class="btn btn-primary btn-lg px-4 gap-3">Next</a>
+      <a href="<%= url_for(before: @events.last.id, year: @year.year) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
     </div>
   <% end %>
 <% else %>
