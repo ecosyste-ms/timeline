@@ -139,7 +139,11 @@ class Event < ApplicationRecord
     when 'WatchEvent'
       'starred'
     when "CreateEvent"
-      "created a #{payload['ref_type']} on"
+      if payload['ref_type'] == 'repository'
+        "created a #{payload['ref_type']}: "
+      else
+        "created a #{payload['ref_type']} on"
+      end
     when "CommitCommentEvent"
       'commented on a commit on'
     when "ReleaseEvent"
@@ -159,11 +163,15 @@ class Event < ApplicationRecord
     when "PushEvent"
       "pushed #{ActionController::Base.helpers.pluralize(payload['size'], 'commit')} to #{payload['ref'].gsub("refs/heads/", '')}"
     when "PullRequestReviewCommentEvent"
-      "#{payload['action']} a review comment on an pull request on"
+      "#{payload['action']} a review comment on a pull request on"
     when "PullRequestReviewEvent"
-      "#{payload['action']} a review on an pull request on"
+      "#{payload['action']} a review on a pull request on"
     when "PullRequestEvent"
-      "#{payload['action']} an pull request on"
+      if payload['pull_request']['draft']
+        "#{payload['action']} a draft pull request on"
+      else
+        "#{payload['action']} a pull request on"
+      end
     when "ForkEvent"
       'forked'
     when 'MemberEvent'

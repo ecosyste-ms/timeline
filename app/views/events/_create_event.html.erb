@@ -1,6 +1,15 @@
-<p>
-  <%= link_to event.payload['ref'], "https://github.com/#{event.repository}/tree/#{event.payload['ref']}", target: :_blank %>
-  <% if event.payload['description'].present? %>
-    - <%= event.payload['description'] %>
-  <% end %>
-</p>
+<% if event.payload['ref_type'] == 'repository' %>
+  <p>
+    <%= link_to event.payload['ref'], "https://github.com/#{event.repository}", target: :_blank %>
+    <% if event.payload['description'].present? %>
+      - <%= event.payload['description'] %>
+    <% end %>
+  </p>
+<% else %>
+  <p>
+    <%= link_to event.payload['ref'], "https://github.com/#{event.repository}/tree/#{event.payload['ref']}", target: :_blank %>
+    <% if event.payload['description'].present? %>
+      - <%= event.payload['description'] %>
+    <% end %>
+  </p>
+<% end %>

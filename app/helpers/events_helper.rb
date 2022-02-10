@@ -7,6 +7,8 @@ module EventsHelper
       case event.payload['ref_type']
       when 'tag'
         'tag'
+      when 'repository'
+        'repo'
       else
       'git-branch'
       end
@@ -40,7 +42,11 @@ module EventsHelper
       when 'closed'
         'git-pull-request-closed'
       else
-        'git-pull-request'
+        if event.payload['pull_request']['draft']
+          'git-pull-request-draft'
+        else
+          'git-pull-request'
+        end
       end
     when "ForkEvent"
       'repo-forked'
