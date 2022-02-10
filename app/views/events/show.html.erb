@@ -8,7 +8,10 @@
   </div>
 
   <h1 class="display-5 fw-bold">
-    <img src="https://github.com/<%= @repository.split('/').first %>.png" class="rounded inline-block me-2" height='40' width='40' onerror="this.style.display='none'">
+    <%= link_to "https://github.com/#{@repository.split('/').first}", target: :_blank do %>
+      <img src="https://github.com/<%= @repository.split('/').first %>.png" class="rounded inline-block me-2" height='40' width='40' onerror="this.style.display='none'">
+    <% end%>
+
     <%= link_to @repository, "https://github.com/#{@repository}", target: :_blank, class: 'text-break' %>
   </h1>
 </div>
