@@ -1,10 +1,13 @@
-<div class="px-4 pt-2 my-5 text-center">
-  <h1 class="display-5 fw-bold">
-    <a href="/" class="text-decoration-none link-dark">GH Timeline</a>
-  </h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
-  </div>
+<div class="col-lg-5 container-sm text-center">
+  <form class="row g-2" action='/events'>
+    <div class="col-auto ms-3">
+      <label for="repo_name" class="visually-hidden">Repository Name</label>
+      <input name='id' type="text" class="form-control" id="repo_name" placeholder="Search: eg octobox/octobox">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Browse Timeline</button>
+    </div>
+  </form>
 </div>
 
 <div class="pb-5 container-sm">

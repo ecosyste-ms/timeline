@@ -1,4 +1,8 @@
 class EventsController < ApplicationController
+  def index
+    redirect_to event_path(id: params[:id])
+  end
+
   def show
     @repository = params[:id]
     @title = @repository
