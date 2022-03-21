@@ -9,7 +9,6 @@ require 'capistrano/rbenv'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
 install_plugin Capistrano::Puma::Daemon
-require 'capistrano/sidekiq'
 require 'capistrano/console'
 require 'capistrano/rails/console'
 require "whenever/capistrano"

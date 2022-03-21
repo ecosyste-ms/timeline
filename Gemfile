@@ -21,7 +21,6 @@ group :development do
   gem "capistrano-rails", require: false
   gem 'capistrano-rbenv', require: false
   gem 'capistrano3-puma', require: false
-  gem 'capistrano-sidekiq', require: false
   gem 'capistrano-rails-console', require: false
   gem 'sql_queries_count'
 end
