@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.0.3"
 
 gem "rails", "~> 7.0.0"
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.3"
 gem "puma", '4.3.11'
 gem "jbuilder"
 gem "bootsnap", require: false
