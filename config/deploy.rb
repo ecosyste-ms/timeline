@@ -39,6 +39,8 @@ namespace :deploy do
   end
 end
 
+set :use_sudo, true
+
 set :rbenv_type, :user
 set :rbenv_ruby, '3.0.3'
 
