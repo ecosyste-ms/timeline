@@ -8,7 +8,7 @@ require 'capistrano/rails'
 require 'capistrano/rbenv'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
-install_plugin Capistrano::Puma::Daemon
+# install_plugin Capistrano::Puma::Daemon
 require 'capistrano/console'
 require 'capistrano/rails/console'
 require "whenever/capistrano"
