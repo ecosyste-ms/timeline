@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 
   def show
     @repository = params[:id]
-    @title = @repository
+    @title = @repository + " - Ecosyste.ms: Timeline"
 
     first_event = Event.where(repository: @repository).first
     raise ActiveRecord::RecordNotFound if first_event.nil?

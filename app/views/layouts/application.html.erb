@@ -8,7 +8,7 @@
     <% if @title.present? %>
         <%= @title %> -
       <% end %>
-      GH Timeline
+      Ecosyste.ms: Timeline
     </title>
     <meta name="description" content="Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from GH Archive.">
     <%= csrf_meta_tags %>
@@ -19,7 +19,7 @@
     <div class="main">
       <div class="px-4 container-sm pt-2 mt-5 text-center">
         <h1 class="display-5 fw-bold">
-          <a href="/" class="text-decoration-hover link-dark">GH Timeline</a>
+          <a href="/" class="text-decoration-hover link-dark">Ecosyste.ms: Timeline</a>
         </h1>
         <div class="col-lg-6 mx-auto">
           <p class="lead mb-4">Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
@@ -30,7 +30,11 @@
     </div>
 
     <footer class="py-5 container-sm text-muted text-center">
-      Copyright © <%= Date.today.year%>, <%= link_to 'Andrew Nesbitt', "https://nesbitt.io", class: 'link-dark', target: :_blank %>
+      <%= link_to 'API', '/docs', class: 'link-dark', target: :_blank %>  — 
+      <%= link_to 'GitHub', "https://github.com/ecosyste-ms/timeline", class: 'link-dark', target: :_blank  %> — 
+      <%= link_to 'Twitter', "https://twitter.com/ecosyste_ms", class: 'link-dark', target: :_blank  %> — 
+      <%= link_to 'AGPL-3', 'https://github.com/ecosyste-ms/timeline/blob/main/LICENSE', class: 'link-dark' %>  — 
+      <%= link_to 'Andrew Nesbitt', "https://nesbitt.io", class: 'link-dark', target: :_blank %>
     </footer>
   </body>
 </html>
