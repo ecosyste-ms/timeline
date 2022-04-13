@@ -1,0 +1,62 @@
+openapi: 3.0.1
+info:
+  title: "Ecosyste.ms: Packages"
+  description: "An open API service providing the timeline of over 4 Billion events for every public repo on GitHub, all the way back to 2015."
+  contact:
+    name: Ecosyste.ms
+    email: support@ecosyste.ms
+    url: https://ecosyste.ms 
+  version: 1.0.0
+externalDocs:
+  description: GitHub Repository
+  url: https://github.com/ecosyste-ms/timeline
+servers:
+- url: https://timeline.ecosyste.ms/api/v1
+paths:
+  /events:
+    get:
+      summary: list all events
+      operationId: getEvents
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+  /events/{repoName}:
+    get:
+      summary: get events for a repository
+      operationId: getEvent
+      parameters:
+        - in: path
+          name: repoName
+          schema:
+            type: string
+          required: true
+          description: name of repository
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        actor:
+          type: string
+        event_type:
+          type: string
+        repository:
+          type: string
+        owner:
+          type: boolean
+        payload:
+          type: object
+        

@@ -1,0 +1,1 @@
+json.extract! event, :actor, :event_type, :repository, :owner, :payload
