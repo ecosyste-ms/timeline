@@ -303,7 +303,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.2p157
 
 BUNDLED WITH
    2.3.10
