@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
-      resources :events, constraints: { id: /.*/ }, only: [:index, :show] 
+      resources :events, constraints: { id: /.*/ }, only: [:index, :show] do
+        collection do
+          get :repository_names
+        end
+      end
     end
   end
 
