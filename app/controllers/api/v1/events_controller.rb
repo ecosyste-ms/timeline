@@ -14,11 +14,11 @@ class Api::V1::EventsController < Api::V1::ApplicationController
   def repository_names
     events = Event.order('id DESC').limit(10000).select(:id, :created_at, :repository)
 
-    if params[:before]
+    if params[:before].present?
       events = events.where('events.id < ?', params[:before])
     end
 
-    if params[:after]
+    if params[:after].present?
       events = events.where('events.id > ?', params[:after])
     end
 
