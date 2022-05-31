@@ -8,7 +8,10 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     first_event = Event.where(repository: @repository).first
     raise ActiveRecord::RecordNotFound if first_event.nil?
 
-    @pagy, @events = pagy_countless(Event.where(repository: @repository).order('id DESC'))
+    @scope = Event.where(repository: @repository).order('id DESC')
+    @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    @pagy, @events = pagy_countless(@scope)
   end
 
   def repository_names
