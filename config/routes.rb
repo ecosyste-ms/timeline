@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/docs'
   mount Rswag::Api::Engine => '/docs'
+
+  mount PgHero::Engine, at: "pghero"
   
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
