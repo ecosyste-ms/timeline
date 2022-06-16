@@ -3,6 +3,14 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     @scope = Event.order('id DESC')
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
 
+    if params[:before].present?
+      @scope = @scope.where('events.id < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.id > ?', params[:after])
+    end
+
     @pagy, @events = pagy_countless(@scope)
   end
 
@@ -13,6 +21,14 @@ class Api::V1::EventsController < Api::V1::ApplicationController
 
     @scope = Event.where(repository: @repository).order('id DESC')
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    if params[:before].present?
+      @scope = @scope.where('events.id < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.id > ?', params[:after])
+    end
 
     @pagy, @events = pagy_countless(@scope)
   end
