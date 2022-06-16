@@ -1,6 +1,9 @@
 class Api::V1::EventsController < Api::V1::ApplicationController
   def index
-    @pagy, @events = pagy(Event.order('id DESC'))
+    @scope = Event.order('id DESC')
+    @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    @pagy, @events = pagy_countless(@scope)
   end
 
   def show
