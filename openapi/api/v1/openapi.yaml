@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: "Ecosyste.ms: Packages"
+  title: "Ecosyste.ms: Timeline"
   description: "An open API service providing the timeline of over 4 Billion events for every public repo on GitHub, all the way back to 2015."
   contact:
     name: Ecosyste.ms
@@ -8,8 +8,7 @@ info:
     url: https://ecosyste.ms 
   version: 1.0.0
   license:
-    name: CC BY-SA 4.0
-    identifier: CC-BY-SA-4.0
+    name: CC-BY-SA-4.0
     url: https://creativecommons.org/licenses/by-sa/4.0/
 externalDocs:
   description: GitHub Repository
@@ -26,12 +25,14 @@ paths:
           in: query
           description: pagination page number 
           required: false
-          type: integer
+          schema:
+            type: integer
         - name: per_page
           in: query
           description: Number of records to return 
           required: false
-          type: integer
+          schema:
+            type: integer
       responses:
         200:
           description: OK
@@ -56,12 +57,14 @@ paths:
           in: query
           description: pagination page number 
           required: false
-          type: integer
+          schema:
+            type: integer
         - name: per_page
           in: query
           description: Number of records to return 
           required: false
-          type: integer
+          schema:
+            type: integer
       responses:
         200:
           description: OK
