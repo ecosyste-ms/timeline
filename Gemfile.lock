@@ -255,7 +255,7 @@ GEM
     stringio (3.0.2)
     strscan (3.0.3)
     thor (1.2.1)
-    tilt (2.0.10)
+    tilt (2.0.11)
     time (0.2.0)
       date
     timeout (0.3.0)
