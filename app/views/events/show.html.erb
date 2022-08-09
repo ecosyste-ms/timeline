@@ -15,7 +15,7 @@
     </button>
     <ul class="dropdown-menu text-center" style='min-width: 82px;'  aria-labelledby="dropdownMenuButton1">
       <% (2015..Time.now.year).reverse_each do |year| %>
-        <li><a class="dropdown-item <%= 'active' if year == @year.year %>" href="<%= url_for(year: year, before: nil) %>"><%= year %></a></li>
+        <li><a class="dropdown-item <%= 'active' if year == @year.year %>" href="<%= url_for(year: year, before: nil, event_type: params[:event_type]) %>"><%= year %></a></li>
       <% end %>
     </ul>
   </div>
@@ -28,7 +28,7 @@
 
   <% if @events.length == 30 %>
     <div class="px-4 mt-5 text-center">
-      <a href="<%= url_for(before: @events.last.id, year: @year.year) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
+      <a href="<%= url_for(before: @events.last.id, year: @year.year, event_type: params[:event_type]) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
     </div>
   <% end %>
 <% else %>

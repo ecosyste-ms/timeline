@@ -28,6 +28,8 @@ class EventsController < ApplicationController
     start_time = @year.beginning_of_year
     end_time = @year.end_of_year
 
+    @events = @events.where(event_type: params[:event_type]) if params[:event_type].present?
+
     @events = @events.where('created_at between ? and ?', start_time, end_time)
 
     if params[:before]
