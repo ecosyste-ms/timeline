@@ -11,6 +11,12 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
       "created_at"=>Time.now})
   end
 
+  test 'should get index' do
+    get events_url
+    assert_response :success
+    assert_template 'events/index'
+  end
+
   test 'renders show' do
     get event_path("Zahabul/humescores")
     assert_response :success
