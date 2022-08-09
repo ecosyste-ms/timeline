@@ -17,4 +17,7 @@
 <div class="container-sm">
   <h2>Recent Events</h2>
   <%= render @events %>
+  <div class="px-4 mt-5 text-center">
+      <a href="<%= events_path(before: @events.last.id) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
+    </div>
 </div>

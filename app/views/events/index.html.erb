@@ -1,0 +1,21 @@
+<div class="px-4 pt-2 mb-5 text-center">
+  <h1 class="display-5 fw-bold">
+    Recent <%= params[:event_type].try(:titleize) || 'Event' %>s
+  </h1>
+</div>
+
+<% if @events.any? %>
+  <div class="container-sm">
+    <%= render @events %>
+  </div>
+
+  <% if @events.length == 30 %>
+    <div class="px-4 mt-5 text-center">
+      <a href="<%= url_for(before: @events.last.id, event_type: params[:event_type]) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
+    </div>
+  <% end %>
+<% else %>
+  <div class="px-4 mt-5 text-center">
+    No events found.
+  </div>
+<% end %>

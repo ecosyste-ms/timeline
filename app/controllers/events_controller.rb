@@ -1,6 +1,18 @@
 class EventsController < ApplicationController
   def index
-    redirect_to event_path(id: params[:id])
+    @title = "Recent #{params[:event_type].try(:titleize) || 'Event'}s - Ecosyste.ms: Timeline"
+    @scope = Event.order('id DESC').limit(30)
+    @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    if params[:before].present?
+      @scope = @scope.where('events.id < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.id > ?', params[:after])
+    end
+
+    @events = @scope.order('id DESC')
   end
 
   def show
