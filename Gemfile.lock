@@ -161,7 +161,7 @@ GEM
       actionview
       octicons (= 17.4.1)
       railties
-    oj (3.13.20)
+    oj (3.13.21)
     open-uri (0.2.0)
       stringio
       time
