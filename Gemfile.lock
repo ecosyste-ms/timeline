@@ -106,14 +106,13 @@ GEM
       rexml
     crass (1.0.6)
     date (3.2.2)
-    digest (3.1.0)
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-protobuf (3.21.6)
-    google-protobuf (3.21.6-x86_64-linux)
+    google-protobuf (3.21.7)
+    google-protobuf (3.21.7-x86_64-linux)
     hashdiff (1.0.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -131,8 +130,8 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.3)
     mocha (1.15.0)
-    msgpack (1.5.6)
-    net-imap (0.3.0)
+    msgpack (1.6.0)
+    net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
       net-protocol
@@ -150,10 +149,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
-    octicons (17.5.0)
-    octicons_helper (17.5.0)
+    octicons (17.6.0)
+    octicons_helper (17.6.0)
       actionview
-      octicons (= 17.5.0)
+      octicons (= 17.6.0)
       railties
     oj (3.13.21)
     open-uri (0.2.0)
@@ -264,7 +263,7 @@ GEM
     websocket-extensions (0.1.5)
     whenever (1.0.0)
       chronic (>= 0.6.3)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   aarch64-linux-musl
