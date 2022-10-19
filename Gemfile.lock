@@ -110,8 +110,8 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-protobuf (3.21.7)
-    google-protobuf (3.21.7-x86_64-linux)
+    google-protobuf (3.21.8)
+    google-protobuf (3.21.8-x86_64-linux)
     hashdiff (1.0.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -278,7 +278,7 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-puma
   chartkick
-  google-protobuf (= 3.21.7)
+  google-protobuf (= 3.21.8)
   jbuilder
   local_time
   mocha
