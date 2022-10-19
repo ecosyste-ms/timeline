@@ -211,9 +211,9 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     rexml (3.2.5)
-    rswag-api (2.6.0)
+    rswag-api (2.7.0)
       railties (>= 3.1, < 7.1)
-    rswag-ui (2.6.0)
+    rswag-ui (2.7.0)
       actionpack (>= 3.1, < 7.1)
       railties (>= 3.1, < 7.1)
     sassc (2.4.0)
@@ -278,6 +278,7 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-puma
   chartkick
+  google-protobuf (= 3.21.7)
   jbuilder
   local_time
   mocha
