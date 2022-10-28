@@ -1,6 +1,6 @@
 # [Ecosyste.ms: Timeline](https://timeline.ecosyste.ms)
 
-An open API service providing the timeline of over 4 Billion events for every public repo on GitHub, all the way back to 2015.
+An open API service providing the timeline of over 5 Billion events for every public repo on GitHub, all the way back to 2015.
 
 This project is part of [Ecosyste.ms](https://ecosyste.ms): Tools and open datasets to support, sustain, and secure critical digital infrastructure.
 
