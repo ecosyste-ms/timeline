@@ -11,7 +11,7 @@ gem 'oj'
 gem 'pagy'
 gem 'whenever', require: false
 gem 'open-uri'
-gem 'bootstrap', '~> 5.2.2'
+gem 'bootstrap', '~> 5.2.3'
 gem 'chartkick'
 gem 'octicons_helper'
 gem 'local_time'
