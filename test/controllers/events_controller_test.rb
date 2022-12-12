@@ -23,6 +23,11 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_template 'events/show'
   end
 
+  test 'redirects to show' do
+    get events_url(id: 'Zahabul/humescores')
+    assert_response :redirect
+  end
+
   test 'renders 404 for unknown repo' do
     assert_raises(ActiveRecord::RecordNotFound) do
       get event_path("foo/bar")
