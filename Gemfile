@@ -22,7 +22,7 @@ gem 'rswag-api'
 gem 'rswag-ui'
 gem "pghero"
 gem "pg_query"
-gem 'google-protobuf', '3.21.11'
+gem 'google-protobuf', '3.21.12'
 
 group :development do
   gem "capistrano", require: false
