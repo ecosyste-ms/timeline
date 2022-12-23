@@ -164,8 +164,7 @@ GEM
       stringio
       time
       uri
-    pagy (5.10.1)
-      activesupport
+    pagy (6.0.0)
     pg (1.4.5)
     pg_query (2.2.0)
       google-protobuf (>= 3.19.2)
