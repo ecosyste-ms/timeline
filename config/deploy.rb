@@ -21,7 +21,7 @@ append :linked_files, 'config/database.yml', 'config/secrets.yml'
 # Skip migration if files in db/migrate were not modified
 set :conditionally_migrate, true
 
-set :keep_releases, 5
+set :keep_releases, 2
 
 set :migration_role, :app
 
