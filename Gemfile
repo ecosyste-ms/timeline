@@ -23,7 +23,7 @@ gem 'rswag-ui'
 gem "pghero"
 gem "pg_query"
 gem 'google-protobuf'
-gem "nokogiri", '1.14.0.rc1'
+gem "nokogiri", '1.14.0'
 
 group :development do
   gem "capistrano", require: false
