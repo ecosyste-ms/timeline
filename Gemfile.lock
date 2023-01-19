@@ -98,7 +98,7 @@ GEM
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
-    chartkick (4.2.1)
+    chartkick (5.0.1)
     chronic (0.10.2)
     concurrent-ruby (1.1.10)
     crack (0.4.5)
