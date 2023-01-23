@@ -100,7 +100,7 @@ GEM
       puma (>= 2.6)
     chartkick (5.0.1)
     chronic (0.10.2)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     crack (0.4.5)
       rexml
     crass (1.0.6)
