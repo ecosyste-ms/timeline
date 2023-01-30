@@ -1,0 +1,8 @@
+{
+  "cron": [
+    {
+      "command": "bundle exec rake events:last_day",
+      "schedule": "*/15 * * * *"
+    }
+  ]
+}
