@@ -9,7 +9,6 @@ gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
 gem 'pagy'
-gem 'whenever', require: false
 gem 'open-uri'
 gem 'bootstrap', '~> 5.2.3'
 gem 'chartkick'
@@ -26,11 +25,6 @@ gem 'google-protobuf'
 gem "nokogiri", '1.14.0'
 
 group :development do
-  gem "capistrano", require: false
-  gem "capistrano-rails", require: false
-  gem 'capistrano-rbenv', require: false
-  gem 'capistrano3-puma', require: false
-  gem 'capistrano-rails-console', require: false
   gem 'sql_queries_count'
 end
 

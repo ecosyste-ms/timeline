@@ -68,8 +68,6 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    airbrussh (1.4.1)
-      sshkit (>= 1.6.1, != 1.7.0)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
     bootsnap (1.16.0)
@@ -79,27 +77,7 @@ GEM
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
-    capistrano (3.17.1)
-      airbrussh (>= 1.0.0)
-      i18n
-      rake (>= 10.0.0)
-      sshkit (>= 1.9.0)
-    capistrano-bundler (2.1.0)
-      capistrano (~> 3.1)
-    capistrano-rails (1.6.2)
-      capistrano (~> 3.1)
-      capistrano-bundler (>= 1.1, < 3)
-    capistrano-rails-console (2.3.0)
-      capistrano (>= 3.5.0, < 4.0.0)
-      sshkit-interactive (~> 0.3.0)
-    capistrano-rbenv (2.2.0)
-      capistrano (~> 3.1)
-      sshkit (~> 1.3)
-    capistrano3-puma (1.2.1)
-      capistrano (~> 3.0)
-      puma (>= 2.6)
     chartkick (5.0.1)
-    chronic (0.10.2)
     concurrent-ruby (1.2.0)
     crack (0.4.5)
       rexml
@@ -140,11 +118,8 @@ GEM
       net-protocol
     net-protocol (0.2.1)
       timeout
-    net-scp (4.0.0)
-      net-ssh (>= 2.6.5, < 8.0.0)
     net-smtp (0.3.3)
       net-protocol
-    net-ssh (7.0.1)
     nio4r (2.5.8)
     nokogiri (1.14.0-aarch64-linux)
       racc (~> 1.4)
@@ -243,11 +218,6 @@ GEM
       sprockets (>= 3.0.0)
     sql_queries_count (0.0.1)
       rails (> 3.0.0)
-    sshkit (1.21.3)
-      net-scp (>= 1.1.2)
-      net-ssh (>= 2.8.0)
-    sshkit-interactive (0.3.0)
-      sshkit (~> 1.12)
     stringio (3.0.4)
     thor (1.2.1)
     tilt (2.0.11)
@@ -264,8 +234,6 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    whenever (1.0.0)
-      chronic (>= 0.6.3)
     zeitwerk (2.6.6)
 
 PLATFORMS
@@ -276,11 +244,6 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2.3)
-  capistrano
-  capistrano-rails
-  capistrano-rails-console
-  capistrano-rbenv
-  capistrano3-puma
   chartkick
   google-protobuf
   jbuilder
@@ -305,7 +268,6 @@ DEPENDENCIES
   shoulda
   sql_queries_count
   webmock
-  whenever
 
 RUBY VERSION
    ruby 3.2.0p0
