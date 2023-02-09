@@ -19,14 +19,14 @@ class EventsController < ApplicationController
 
   def show
     @repository = params[:id]
-    @title = @repository + " - Ecosyste.ms: Timeline"
-
+    
     first_event = Event.where(repository: @repository).first
     raise ActiveRecord::RecordNotFound if first_event.nil?
 
     @events = Event.where(repository: @repository).order('id DESC').limit(30)
 
     @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
+    @title = @repository + " Events in #{@year.year} - Ecosyste.ms: Timeline"
     start_time = @year.beginning_of_year
     end_time = @year.end_of_year
 
