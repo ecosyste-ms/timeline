@@ -225,7 +225,7 @@ GEM
     tilt (2.1.0)
     time (0.2.1)
       date
-    timeout (0.3.1)
+    timeout (0.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (0.12.0)
