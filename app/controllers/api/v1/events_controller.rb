@@ -33,6 +33,29 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     @pagy, @events = pagy_countless(@scope)
   end
 
+  def summary
+    @repository = params[:id]
+    @scope = Event.where(repository: @repository)
+
+    if params[:year]
+      @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
+      @title = @repository + " Events in #{@year.year} - Ecosyste.ms: Timeline"
+      start_time = @year.beginning_of_year
+      end_time = @year.end_of_year
+      @scope = @scope.where('created_at between ? and ?', start_time, end_time)
+    end
+
+    if params[:before].present?
+      @scope = @scope.where('events.created_at < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.created_at > ?', params[:after])
+    end
+
+    render json: @scope.group(:event_type).count
+  end
+
   def repository_names
     events = Event.order('id DESC').limit(10000).select(:id, :created_at, :repository)
 

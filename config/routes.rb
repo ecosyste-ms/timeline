@@ -10,6 +10,9 @@ Rails.application.routes.draw do
         collection do
           get :repository_names
         end
+        member do
+          get :summary
+        end
       end
     end
   end
