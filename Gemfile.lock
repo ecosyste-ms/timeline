@@ -129,10 +129,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
-    octicons (18.2.0)
-    octicons_helper (18.2.0)
+    octicons (18.3.0)
+    octicons_helper (18.3.0)
       actionview
-      octicons (= 18.2.0)
+      octicons (= 18.3.0)
       railties
     oj (3.14.2)
     open-uri (0.3.0)
