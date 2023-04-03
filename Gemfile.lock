@@ -66,7 +66,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.1)
+    addressable (2.8.2)
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
@@ -98,7 +98,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     local_time (2.1.0)
-    loofah (2.19.1)
+    loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.8.1)
@@ -122,7 +122,7 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    nio4r (2.5.8)
+    nio4r (2.5.9)
     nokogiri (1.14.2-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.14.2-arm64-darwin)
@@ -139,7 +139,7 @@ GEM
       stringio
       time
       uri
-    pagy (6.0.2)
+    pagy (6.0.3)
     pg (1.4.6)
     pg_query (4.2.0)
       google-protobuf (>= 3.19.2)
@@ -272,7 +272,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.2.1p0
+   ruby 3.2.2p0
 
 BUNDLED WITH
-   2.4.7
+   2.4.10
