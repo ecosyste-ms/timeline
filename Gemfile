@@ -22,7 +22,7 @@ gem 'rswag-ui'
 gem "pghero"
 gem "pg_query"
 gem 'google-protobuf'
-gem "nokogiri", '1.14.2'
+gem "nokogiri", '1.14.3'
 
 group :development do
   gem 'sql_queries_count'
