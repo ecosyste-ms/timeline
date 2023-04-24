@@ -44,10 +44,12 @@ class Event < ApplicationRecord
     js = Zlib::GzipReader.new(gz).read
     batch_size = 2000
     events = []
+    repo_names = Set.new
     count = 0
     begin
       Oj.load(js) do |event_json|
         events << Event.format_event(event_json)
+        repo_names << event_json['repo']['name']
         if events.length >= batch_size
           count += 1
           Event.insert_all(events) if events.any?
@@ -59,6 +61,7 @@ class Event < ApplicationRecord
       ends = Time.now
       puts "Finished: #{ends - starts} seconds"
       Import.create(filename: filename, event_count: count)
+      ping_repos(repo_names.to_a)
     rescue Oj::ParseError
       puts "Invalid JSON in #{filename}"
     end
@@ -92,6 +95,20 @@ class Event < ApplicationRecord
 
     urls.each do |url|
       import_from_url(url)
+    end
+  end
+
+  def self.ping_repos(names)
+
+    conn = Faraday.new(:url => "https://repos.ecosyste.ms") do |faraday|
+      faraday.adapter :typhoeus
+    end
+    
+    conn.in_parallel do
+      names.each do |name|
+        puts "Pinging #{name}"
+        conn.get("api/v1/hosts/GitHub/repositories/#{name}/ping") rescue nil
+      end
     end
   end
 

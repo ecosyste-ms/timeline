@@ -84,7 +84,16 @@ GEM
     crass (1.0.6)
     date (3.3.3)
     erubi (1.12.0)
+    ethon (0.16.0)
+      ffi (>= 1.15.0)
     execjs (2.8.1)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    faraday-typhoeus (1.0.0)
+      faraday (~> 2.0)
+      typhoeus (~> 1.4)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -226,6 +235,8 @@ GEM
     time (0.2.2)
       date
     timeout (0.3.2)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (0.12.1)
@@ -247,6 +258,7 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2.3)
   chartkick
+  faraday-typhoeus
   google-protobuf
   jbuilder
   local_time

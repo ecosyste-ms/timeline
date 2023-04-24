@@ -23,6 +23,7 @@ gem "pghero"
 gem "pg_query"
 gem 'google-protobuf'
 gem "nokogiri", '1.14.3'
+gem 'faraday-typhoeus'
 
 group :development do
   gem 'sql_queries_count'
