@@ -49,7 +49,7 @@ class Event < ApplicationRecord
     begin
       Oj.load(js) do |event_json|
         events << Event.format_event(event_json)
-        repo_names << event_json['repo']['name']
+        repo_names << event_json['repo']['name'] if pingable_event_types.include?(event_json['type'])
         if events.length >= batch_size
           count += 1
           Event.insert_all(events) if events.any?
@@ -98,15 +98,20 @@ class Event < ApplicationRecord
     end
   end
 
-  def self.ping_repos(names)
+  def self.pingable_event_types
+    ['PublicEvent','PushEvent','ReleaseEvent']
+  end
 
+  def self.ping_repos(names)
+    puts "pinging #{names.length} repos"
     conn = Faraday.new(:url => "https://repos.ecosyste.ms") do |faraday|
       faraday.adapter :typhoeus
     end
     
-    conn.in_parallel do
+    manager = Typhoeus::Hydra.new(:max_concurrency => 50)
+
+    conn.in_parallel(manager) do
       names.each do |name|
-        puts "Pinging #{name}"
         conn.get("api/v1/hosts/GitHub/repositories/#{name}/ping") rescue nil
       end
     end
