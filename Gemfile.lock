@@ -263,7 +263,7 @@ DEPENDENCIES
   jbuilder
   local_time
   mocha
-  nokogiri (= 1.14.3)
+  nokogiri
   octicons_helper
   oj
   open-uri

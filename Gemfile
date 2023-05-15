@@ -22,7 +22,7 @@ gem 'rswag-ui'
 gem "pghero"
 gem "pg_query"
 gem 'google-protobuf'
-gem "nokogiri", '1.14.3'
+gem "nokogiri"
 gem 'faraday-typhoeus'
 
 group :development do
