@@ -101,7 +101,7 @@ GEM
     google-protobuf (3.23.2-arm64-darwin)
     google-protobuf (3.23.2-x86_64-linux)
     hashdiff (1.0.1)
-    i18n (1.14.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -143,7 +143,7 @@ GEM
       actionview
       octicons (= 19.1.0)
       railties
-    oj (3.14.3)
+    oj (3.15.0)
     open-uri (0.3.0)
       stringio
       time
@@ -288,4 +288,4 @@ RUBY VERSION
    ruby 3.2.2p0
 
 BUNDLED WITH
-   2.4.10
+   2.4.13
