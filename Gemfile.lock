@@ -72,9 +72,9 @@ GEM
       execjs (~> 2)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap (5.2.3)
+    bootstrap (5.3.1)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.11.6, < 3)
+      popper_js (>= 2.11.8, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
     chartkick (5.0.3)
@@ -258,7 +258,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap (~> 5.2.3)
+  bootstrap (~> 5.3.1)
   chartkick
   faraday-typhoeus
   google-protobuf
