@@ -97,9 +97,9 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    google-protobuf (3.23.4-aarch64-linux)
-    google-protobuf (3.23.4-arm64-darwin)
-    google-protobuf (3.23.4-x86_64-linux)
+    google-protobuf (3.24.0-aarch64-linux)
+    google-protobuf (3.24.0-arm64-darwin)
+    google-protobuf (3.24.0-x86_64-linux)
     hashdiff (1.0.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -132,11 +132,11 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.3-aarch64-linux)
+    nokogiri (1.15.4-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.15.3-arm64-darwin)
+    nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.3-x86_64-linux)
+    nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     octicons (19.5.0)
     octicons_helper (19.5.0)
@@ -154,7 +154,7 @@ GEM
       google-protobuf (>= 3.22.3)
     pghero (3.3.3)
       activerecord (>= 6)
-    popper_js (2.11.7)
+    popper_js (2.11.8)
     public_suffix (5.0.3)
     puma (6.3.0)
       nio4r (~> 2.0)
@@ -231,7 +231,7 @@ GEM
       sprockets (>= 3.0.0)
     sql_queries_count (0.0.1)
       rails (> 3.0.0)
-    stringio (3.0.7)
+    stringio (3.0.8)
     thor (1.2.2)
     tilt (2.2.0)
     time (0.2.2)
@@ -289,4 +289,4 @@ RUBY VERSION
    ruby 3.2.2p0
 
 BUNDLED WITH
-   2.4.13
+   2.4.18
