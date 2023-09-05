@@ -24,6 +24,7 @@ gem "pg_query"
 gem 'google-protobuf'
 gem "nokogiri"
 gem 'faraday-typhoeus'
+gem 'appsignal'
 
 group :development do
   gem 'sql_queries_count'
