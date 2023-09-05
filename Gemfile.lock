@@ -97,7 +97,7 @@ GEM
       faraday (~> 2.0)
       typhoeus (~> 1.4)
     ffi (1.15.5)
-    globalid (1.2.0)
+    globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (3.24.2-aarch64-linux)
     google-protobuf (3.24.2-arm64-darwin)
