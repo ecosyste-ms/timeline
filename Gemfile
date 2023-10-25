@@ -10,7 +10,7 @@ gem "bootsnap", require: false
 gem 'oj'
 gem 'pagy'
 gem 'open-uri'
-gem 'bootstrap', '~> 5.3.1'
+gem 'bootstrap', '~> 5.3.2'
 gem 'chartkick'
 gem 'octicons_helper'
 gem 'local_time'
