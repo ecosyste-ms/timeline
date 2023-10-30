@@ -25,6 +25,8 @@ gem 'google-protobuf'
 gem "nokogiri"
 gem 'faraday-typhoeus'
 gem 'appsignal'
+gem "sprockets-rails"
+gem "sassc-rails"
 
 group :development do
   gem 'sql_queries_count'
