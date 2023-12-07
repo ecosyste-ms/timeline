@@ -164,7 +164,7 @@ GEM
       octicons (= 19.8.0)
       railties
     oj (3.16.1)
-    open-uri (0.4.0)
+    open-uri (0.4.1)
       stringio
       time
       uri
