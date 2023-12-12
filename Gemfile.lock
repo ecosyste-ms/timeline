@@ -75,9 +75,9 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    appsignal (3.4.16)
+    appsignal (3.5.0)
       rack
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
@@ -142,7 +142,7 @@ GEM
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.7)
+    net-imap (0.4.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -163,8 +163,8 @@ GEM
       actionview
       octicons (= 19.8.0)
       railties
-    oj (3.16.2)
-      bigdecimal (~> 3.1)
+    oj (3.16.3)
+      bigdecimal (>= 3.0)
     open-uri (0.4.1)
       stringio
       time
