@@ -116,7 +116,7 @@ GEM
     google-protobuf (3.25.1-aarch64-linux)
     google-protobuf (3.25.1-arm64-darwin)
     google-protobuf (3.25.1-x86_64-linux)
-    hashdiff (1.0.1)
+    hashdiff (1.1.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.0)
