@@ -77,7 +77,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    appsignal (3.5.0)
+    appsignal (3.5.1)
       rack
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
@@ -142,7 +142,7 @@ GEM
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.8)
+    net-imap (0.4.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -171,7 +171,7 @@ GEM
       uri
     pagy (6.2.0)
     pg (1.5.4)
-    pg_query (4.2.3)
+    pg_query (5.0.0)
       google-protobuf (>= 3.22.3)
     pghero (3.4.0)
       activerecord (>= 6)
@@ -327,4 +327,4 @@ RUBY VERSION
    ruby 3.2.2p0
 
 BUNDLED WITH
-   2.5.2
+   2.5.3
