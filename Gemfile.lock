@@ -102,25 +102,24 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     execjs (2.9.1)
-    faraday (2.8.1)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
     faraday-typhoeus (1.1.0)
       faraday (~> 2.0)
       typhoeus (~> 1.4)
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (3.25.1)
+    google-protobuf (3.25.2)
     hashdiff (1.1.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.1)
-    irb (1.11.0)
+    irb (1.11.1)
       rdoc
-      reline (>= 0.3.8)
+      reline (>= 0.4.2)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -140,6 +139,8 @@ GEM
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    net-http (0.4.1)
+      uri
     net-imap (0.4.9.1)
       date
       net-protocol
@@ -167,9 +168,9 @@ GEM
       stringio
       time
       uri
-    pagy (6.2.0)
+    pagy (6.3.0)
     pg (1.5.4)
-    pg_query (5.0.0)
+    pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
     pghero (3.4.0)
       activerecord (>= 6)
