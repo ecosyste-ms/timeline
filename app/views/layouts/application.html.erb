@@ -13,6 +13,7 @@
     <meta name="description" content="Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from GH Archive.">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <script defer data-domain="timeline.ecosyste.ms" src="https://plausible.ecosyste.ms/js/script.js"></script>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
