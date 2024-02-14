@@ -169,7 +169,7 @@ GEM
       stringio
       time
       uri
-    pagy (6.4.3)
+    pagy (6.4.4)
     pg (1.5.4)
     pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
