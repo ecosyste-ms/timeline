@@ -89,7 +89,7 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
     builder (3.2.4)
-    chartkick (5.0.5)
+    chartkick (5.0.6)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crack (1.0.0)
@@ -97,8 +97,7 @@ GEM
       rexml
     crass (1.0.6)
     date (3.3.4)
-    drb (2.2.0)
-      ruby2_keywords
+    drb (2.2.1)
     erubi (1.12.0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
@@ -135,7 +134,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.2)
+    marcel (1.0.3)
     mini_mime (1.1.5)
     minitest (5.22.2)
     mocha (2.1.0)
@@ -171,7 +170,7 @@ GEM
       stringio
       time
       uri
-    pagy (7.0.6)
+    pagy (7.0.8)
     pg (1.5.5)
     pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
