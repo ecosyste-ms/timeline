@@ -15,6 +15,7 @@ class EventsController < ApplicationController
     end
 
     @events = @scope.order('id DESC')
+    expires_in 1.hour, public: true
   end
 
   def show
@@ -37,5 +38,6 @@ class EventsController < ApplicationController
     if params[:before]
       @events = @events.where('events.id < ?', params[:before]).order('id DESC')
     end
+    expires_in 1.hour, public: true
   end
 end
