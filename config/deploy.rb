@@ -42,7 +42,7 @@ end
 set :use_sudo, true
 
 set :rbenv_type, :user
-set :rbenv_ruby, '3.3.0'
+set :rbenv_ruby, '3.3.1'
 
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
