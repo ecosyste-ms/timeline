@@ -172,7 +172,7 @@ GEM
       actionview
       octicons (= 19.9.0)
       railties
-    oj (3.16.3)
+    oj (3.16.4)
       bigdecimal (>= 3.0)
     open-uri (0.4.1)
       stringio
