@@ -75,8 +75,8 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     appsignal (3.8.1)
       rack
     autoprefixer-rails (10.4.16.0)
@@ -111,6 +111,7 @@ GEM
       typhoeus (~> 1.4)
     ffi (1.17.0-aarch64-linux-musl)
     ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -187,7 +188,7 @@ GEM
     popper_js (2.11.8)
     psych (5.1.2)
       stringio
-    public_suffix (5.1.1)
+    public_suffix (6.0.0)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
@@ -300,6 +301,7 @@ GEM
 PLATFORMS
   aarch64-linux-musl
   arm64-darwin-21
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
