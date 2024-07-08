@@ -109,8 +109,9 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     execjs (2.9.1)
-    faraday (2.9.2)
+    faraday (2.10.0)
       faraday-net_http (>= 2.0, < 3.2)
+      logger
     faraday-net_http (3.1.0)
       net-http
     faraday-typhoeus (1.1.0)
@@ -142,6 +143,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     local_time (2.1.0)
+    logger (1.6.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
