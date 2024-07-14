@@ -175,10 +175,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
-    octicons (19.10.0)
-    octicons_helper (19.10.0)
+    octicons (19.11.0)
+    octicons_helper (19.11.0)
       actionview
-      octicons (= 19.10.0)
+      octicons (= 19.11.0)
       railties
     oj (3.16.4)
       bigdecimal (>= 3.0)
@@ -190,8 +190,8 @@ GEM
     pg (1.5.6)
     pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
-    pghero (3.5.0)
-      activerecord (>= 6)
+    pghero (3.6.0)
+      activerecord (>= 6.1)
     popper_js (2.11.8)
     psych (5.1.2)
       stringio
@@ -199,7 +199,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (3.1.6)
+    rack (3.1.7)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-attack-rate-limit (1.1.0)
@@ -349,4 +349,4 @@ RUBY VERSION
    ruby 3.3.3p0
 
 BUNDLED WITH
-   2.5.14
+   2.5.15
