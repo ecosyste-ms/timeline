@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.3"
+ruby "3.3.4"
 
 gem "rails", "~> 7.1.1"
 gem "pg", "~> 1.5"
@@ -27,7 +27,6 @@ gem 'faraday-typhoeus'
 gem 'appsignal'
 gem "sprockets-rails"
 gem "sassc-rails"
-gem "net-pop", github: "ruby/net-pop" # temporary fix for net-pop until ruby 3.3.4
 
 group :development do
   gem 'sql_queries_count'
