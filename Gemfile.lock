@@ -170,7 +170,7 @@ GEM
       actionview
       octicons (= 19.11.0)
       railties
-    oj (3.16.5)
+    oj (3.16.6)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
     open-uri (0.4.1)
