@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.4"
+ruby "3.3.5"
 
 gem "rails", "~> 7.2.1"
 gem "pg", "~> 1.5"
@@ -27,6 +27,7 @@ gem 'faraday-typhoeus'
 gem 'appsignal'
 gem "sprockets-rails"
 gem "sassc-rails"
+gem 'ostruct'
 
 group :development do
   gem 'sql_queries_count'
