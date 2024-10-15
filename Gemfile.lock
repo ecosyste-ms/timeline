@@ -168,10 +168,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
-    octicons (19.11.0)
-    octicons_helper (19.11.0)
+    octicons (19.12.0)
+    octicons_helper (19.12.0)
       actionview
-      octicons (= 19.11.0)
+      octicons (= 19.12.0)
       railties
     oj (3.16.6)
       bigdecimal (>= 3.0)
