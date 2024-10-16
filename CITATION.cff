@@ -12,7 +12,7 @@ authors:
 repository-code: 'https://github.com/ecosyste-ms/timeline'
 url: 'https://timeline.ecosyste.ms'
 abstract: >-
-  An open API service providing the timeline of over 6 Billion events for every public repo on GitHub, all the way back to 2015.
+  An open API service providing the timeline of over 6 Billion events for every public repo on GitHub .
 keywords:
   - open source
   - package management

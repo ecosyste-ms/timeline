@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: "Ecosyste.ms: Timeline"
-  description: "An open API service providing the timeline of over 4 Billion events for every public repo on GitHub, all the way back to 2015."
+  description: "An open API service providing the timeline of over 4 Billion events for every public repo on GitHub ."
   contact:
     name: Ecosyste.ms
     email: support@ecosyste.ms

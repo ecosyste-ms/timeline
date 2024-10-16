@@ -10,7 +10,7 @@
       <% end %>
       Ecosyste.ms: Timeline
     </title>
-    <meta name="description" content="Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from GH Archive.">
+    <meta name="description" content="Browse the timeline of events for every public repo on GitHub. Data updated hourly from GH Archive.">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -22,7 +22,7 @@
           <a href="/" class="text-decoration-hover link-dark">Ecosyste.ms: Timeline</a>
         </h1>
         <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Browse the timeline of over <%= number_to_human Import.sum(:event_count) %> events for every public repo on GitHub, all the way back to 2015. Data updated hourly from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
+          <p class="lead mb-4">Browse the timeline of events for every public repo on GitHub. Data updated hourly from <a href='https://www.gharchive.org/'>GH Archive</a>.</p>
         </div>
       </div>
 
