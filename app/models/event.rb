@@ -105,8 +105,6 @@ class Event < ApplicationRecord
   def self.ping_repos(names)
     puts "pinging #{names.length} repos"
 
-    names = names.uniq { |repo| repo.split("/").first } # only ping one repo per owner
-
     conn = Faraday.new(:url => "https://repos.ecosyste.ms") do |faraday|
       faraday.adapter :typhoeus
     end
