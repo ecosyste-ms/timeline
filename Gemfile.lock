@@ -178,12 +178,12 @@ GEM
     oj (3.16.7)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
-    open-uri (0.4.1)
+    open-uri (0.5.0)
       stringio
       time
       uri
     ostruct (0.6.0)
-    pagy (9.1.1)
+    pagy (9.2.0)
     pg (1.5.9)
     pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
@@ -284,7 +284,7 @@ GEM
     tilt (2.4.0)
     time (0.4.0)
       date
-    timeout (0.4.1)
+    timeout (0.4.2)
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
@@ -344,4 +344,4 @@ RUBY VERSION
    ruby 3.3.5p0
 
 BUNDLED WITH
-   2.5.22
+   2.5.23
