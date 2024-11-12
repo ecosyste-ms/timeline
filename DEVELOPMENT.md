@@ -8,7 +8,7 @@ First things first, you'll need to fork and clone the repository to your local m
 
 The project uses ruby on rails which have a number of system dependencies you'll need to install. 
 
-- [ruby 3.3.5](https://www.ruby-lang.org/en/documentation/installation/)
+- [ruby](https://www.ruby-lang.org/en/documentation/installation/)
 - [postgresql 14](https://www.postgresql.org/download/)
 - [node.js 16+](https://nodejs.org/en/download/)
 
@@ -16,8 +16,7 @@ Once you've got all of those installed, from the root directory of the project r
 
 ```
 bundle install
-bundle exec rake db:create
-bundle exec rake db:migrate
+bundle exec rake db:setup
 rails server
 ```
 
