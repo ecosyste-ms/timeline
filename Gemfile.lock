@@ -183,7 +183,7 @@ GEM
       time
       uri
     ostruct (0.6.1)
-    pagy (9.3.1)
+    pagy (9.3.2)
     pg (1.5.9)
     pg_query (5.1.0)
       google-protobuf (>= 3.22.3)
