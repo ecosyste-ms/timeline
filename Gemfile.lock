@@ -95,7 +95,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    date (3.4.0)
+    date (3.4.1)
     drb (2.2.1)
     erubi (1.13.0)
     ethon (0.16.0)
