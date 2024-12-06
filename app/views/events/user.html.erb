@@ -1,0 +1,37 @@
+<div class="px-4 pt-2 mb-5 text-center">
+  <h1 class="display-5 fw-bold">
+    <%= link_to "https://github.com/#{@actor}", target: :_blank do %>
+      <img src="https://github.com/<%= @actor %>.png" class="rounded inline-block me-2" height='40' width='40' onerror="this.style.display='none'">
+    <% end%>
+    <%= link_to @actor, "https://github.com/#{@actor}", target: :_blank, class: 'text-break' %>
+  </h1>
+</div>
+
+<div class='position-relative mb-3 pb-3'>
+  <div class="dropdown text-center">
+    <button class="btn dropdown-toggle position-absolute top-0 start-50 translate-middle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= @year.year %>
+    </button>
+    <ul class="dropdown-menu text-center" style='min-width: 82px;'  aria-labelledby="dropdownMenuButton1">
+      <% (2015..Time.now.year).reverse_each do |year| %>
+        <li><a class="dropdown-item <%= 'active' if year == @year.year %>" href="<%= url_for(year: year, before: nil, event_type: params[:event_type]) %>"><%= year %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<% if @events.any? %>
+  <div class="container-sm">
+    <%= render @events %>
+  </div>
+
+  <% if @events.length == 30 %>
+    <div class="px-4 mt-5 text-center">
+      <a href="<%= url_for(before: @events.last.id, year: @year.year, event_type: params[:event_type]) %>" class="btn btn-primary btn-lg px-4 gap-3">Load more</a>
+    </div>
+  <% end %>
+<% else %>
+  <div class="px-4 mt-5 text-center">
+    No more events found for this year, try a different year.
+  </div>
+<% end %>

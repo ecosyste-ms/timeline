@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/users/*id', to: 'events#user', as: :user
   get '/events', to: 'events#index', as: :events
   get '/events/*id', to: 'events#show', as: :event
 

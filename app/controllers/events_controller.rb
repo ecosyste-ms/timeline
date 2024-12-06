@@ -40,4 +40,24 @@ class EventsController < ApplicationController
     end
     expires_in 1.hour, public: true
   end
+
+  def user
+    @actor = params[:id]
+    @events = Event.where(actor: @actor).order('id DESC').limit(30)
+
+    @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
+    @title = @actor + " Events in #{@year.year} - Ecosyste.ms: Timeline"
+    start_time = @year.beginning_of_year
+    end_time = @year.end_of_year
+
+
+    @events = @events.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    @events = @events.where('created_at between ? and ?', start_time, end_time)
+
+    if params[:before]
+      @events = @events.where('events.id < ?', params[:before]).order('id DESC')
+    end
+    expires_in 1.hour, public: true
+  end
 end

@@ -6,7 +6,7 @@
       </div>
       <div class="flex-grow-1 ms-3 text-break">
         <h5 class='card-title'>
-          <%= link_to event.actor, "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank %>
+          <%= link_to event.actor, "/users/#{event.actor.gsub('[bot]', '')}", target: :_blank %>
 
           <%= event.action_text %>
 
@@ -24,7 +24,7 @@
         <%= render partial: "events/#{event.event_type.underscore}", locals: {event: event}  %>
       </div>
       <div class="flex-shrink-0" title='<%= event_name(event.event_type) %>'>
-        <%= link_to "https://github.com/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: '' do %>
+        <%= link_to "/users/#{event.actor.gsub('[bot]', '')}", target: :_blank, class: '' do %>
           <img src="https://github.com/<%= event.actor.gsub('[bot]', '') %>.png" class="rounded" height='40' width='40' onerror="this.style.display='none'">
         <% end %>
       </div>  
