@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_08_151323) do
-
+ActiveRecord::Schema[8.0].define(version: 2024_12_06_123035) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.string "actor"
@@ -21,7 +20,8 @@ ActiveRecord::Schema.define(version: 2022_02_08_151323) do
     t.string "repository"
     t.string "owner"
     t.json "payload", default: "{}", null: false
-    t.datetime "created_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.index ["actor"], name: "index_events_on_actor"
     t.index ["created_at"], name: "index_events_on_created_at", using: :brin
     t.index ["repository"], name: "index_events_on_repository"
   end
@@ -29,8 +29,7 @@ ActiveRecord::Schema.define(version: 2022_02_08_151323) do
   create_table "imports", force: :cascade do |t|
     t.string "filename"
     t.integer "event_count"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
 end
