@@ -37,5 +37,6 @@ module Ghevents
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     # config.api_only = true
+    config.active_support.to_time_preserves_timezone = :zone
   end
 end
