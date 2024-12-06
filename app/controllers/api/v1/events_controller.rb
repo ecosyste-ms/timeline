@@ -75,4 +75,49 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     @oldest = events.last
     expires_in 1.hour, public: true
   end
+
+  def user
+    @actor = params[:id]
+    first_event = Event.where(actor: @actor).first
+    raise ActiveRecord::RecordNotFound if first_event.nil?
+
+    @scope = Event.where(actor: @actor).order('id DESC')
+    @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
+
+    if params[:before].present?
+      @scope = @scope.where('events.id < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.id > ?', params[:after])
+    end
+
+    @pagy, @events = pagy_countless(@scope)
+    expires_in 1.hour, public: true
+    render :show
+  end
+  
+  def user_summary
+    @actor = params[:id]
+    @scope = Event.where(actor: @actor)
+
+    if params[:year]
+      @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
+      @title = @actor + " Events in #{@year.year} - Ecosyste.ms: Timeline"
+      start_time = @year.beginning_of_year
+      end_time = @year.end_of_year
+      @scope = @scope.where('created_at between ? and ?', start_time, end_time)
+    end
+
+    if params[:before].present?
+      @scope = @scope.where('events.created_at < ?', params[:before])
+    end
+
+    if params[:after].present?
+      @scope = @scope.where('events.created_at > ?', params[:after])
+    end
+
+    render json: @scope.group(:event_type).count
+    expires_in 1.day, public: true
+  end
 end

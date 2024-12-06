@@ -14,6 +14,8 @@ Rails.application.routes.draw do
           get :summary
         end
       end
+      get '/users/:id', to: 'events#user', as: :user
+      get '/users/:id/summary', to: 'events#user_summary', as: :user_summary
     end
   end
 
