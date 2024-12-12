@@ -129,7 +129,7 @@ GEM
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
-    irb (1.14.1)
+    irb (1.14.2)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jbuilder (2.13.0)
@@ -170,10 +170,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.17.1-x86_64-linux)
       racc (~> 1.4)
-    octicons (19.13.0)
-    octicons_helper (19.13.0)
+    octicons (19.14.0)
+    octicons_helper (19.14.0)
       actionview
-      octicons (= 19.13.0)
+      octicons (= 19.14.0)
       railties
     oj (3.16.7)
       bigdecimal (>= 3.0)
