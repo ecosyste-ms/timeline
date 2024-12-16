@@ -154,7 +154,7 @@ GEM
     msgpack (1.7.5)
     net-http (0.6.0)
       uri
-    net-imap (0.5.1)
+    net-imap (0.5.2)
       date
       net-protocol
     net-pop (0.1.2)
@@ -285,7 +285,7 @@ GEM
     tilt (2.4.0)
     time (0.4.1)
       date
-    timeout (0.4.2)
+    timeout (0.4.3)
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
