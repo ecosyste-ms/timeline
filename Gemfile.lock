@@ -110,19 +110,10 @@ GEM
     faraday-typhoeus (1.1.0)
       faraday (~> 2.0)
       typhoeus (~> 1.4)
-    ffi (1.17.0-aarch64-linux-musl)
-    ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
-    ffi (1.17.0-x86_64-linux-musl)
+    ffi (1.17.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.29.2-aarch64-linux)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86_64-linux)
+    google-protobuf (4.29.2)
       bigdecimal
       rake (>= 13)
     hashdiff (1.1.2)
@@ -148,6 +139,7 @@ GEM
       net-smtp
     marcel (1.0.4)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.8)
     minitest (5.25.4)
     mocha (2.7.1)
       ruby2_keywords (>= 0.0.5)
@@ -164,11 +156,8 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.17.2-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.17.2-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.17.2-x86_64-linux)
+    nokogiri (1.17.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     octicons (19.14.0)
     octicons_helper (19.14.0)
@@ -342,7 +331,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.3.6p108
+   ruby 3.4.1p0
 
 BUNDLED WITH
    2.6.1
