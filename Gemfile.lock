@@ -168,17 +168,17 @@ GEM
       timeout
     net-smtp (0.5.0)
     nio4r (2.7.4)
-    nokogiri (1.18.1-aarch64-linux-musl)
+    nokogiri (1.18.2-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.1-arm-linux-gnu)
+    nokogiri (1.18.2-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.1-arm-linux-musl)
+    nokogiri (1.18.2-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.1-arm64-darwin)
+    nokogiri (1.18.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.1-x86_64-linux-gnu)
+    nokogiri (1.18.2-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.1-x86_64-linux-musl)
+    nokogiri (1.18.2-x86_64-linux-musl)
       racc (~> 1.4)
     octicons (19.14.0)
     octicons_helper (19.14.0)
@@ -420,12 +420,12 @@ CHECKSUMS
   net-protocol (0.2.2) sha256=aa73e0cba6a125369de9837b8d8ef82a61849360eba0521900e2c3713aa162a8
   net-smtp (0.5.0) sha256=5fc0415e6ea1cc0b3dfea7270438ec22b278ca8d524986a3ae4e5ae8d087b42a
   nio4r (2.7.4) sha256=d95dee68e0bb251b8ff90ac3423a511e3b784124e5db7ff5f4813a220ae73ca9
-  nokogiri (1.18.1-aarch64-linux-musl) sha256=1b303402cd045f9075a6ee291767c1ffe654b426ed30911e5b47819c21855b22
-  nokogiri (1.18.1-arm-linux-gnu) sha256=3b873fd6b0cd1ad7c77e87af701075bdfd14c9a6b2f2965c5e00ed29a5627a37
-  nokogiri (1.18.1-arm-linux-musl) sha256=d6fe26f6d1425f403077fbf829fc0ef8e521545c924a13777d6fdf1a0c07c1f3
-  nokogiri (1.18.1-arm64-darwin) sha256=d75193f284c899d225943a8944479faedd995a7573ddd5c8308ffbdf2ec55204
-  nokogiri (1.18.1-x86_64-linux-gnu) sha256=e516cf16ccde67ed4cc595a2621ca5ddd42562ecb24928914b0045a20a41620e
-  nokogiri (1.18.1-x86_64-linux-musl) sha256=f2c389bc100541247edaeaabc6d875b31d72e897471b66a67987b2e4df0192d6
+  nokogiri (1.18.2-aarch64-linux-musl) sha256=99bcea596a80eaee99f2bae2596275641ea688262c1da32b4e90db6159e86477
+  nokogiri (1.18.2-arm-linux-gnu) sha256=6fb0246b69f2c589a69254e82bc2a40aa238c4f977fd7903e283341a92935729
+  nokogiri (1.18.2-arm-linux-musl) sha256=dcdd4d10ed2743f0d8c887825700c3a8506aea1aa415917ac50ccc01597c51a3
+  nokogiri (1.18.2-arm64-darwin) sha256=8288ec7a296e2510ca9bd053c0c5989f11260f8c07bc3e9afbafa536f7077281
+  nokogiri (1.18.2-x86_64-linux-gnu) sha256=9330ced4a976604865c2a76ce158e2bc608fa83999552e85a32ec06f85f427db
+  nokogiri (1.18.2-x86_64-linux-musl) sha256=1cd7786ed15c76958d6a8f9a864df6208fecd624c340eb4ed211fbea60328f02
   octicons (19.14.0) sha256=c74665b399d6b620d87839f5026808d9ce5d2b0d993a5bd13fb43307b2de2f28
   octicons_helper (19.14.0) sha256=fec36c75e7de1b0aa58ef49266894c40201601be8554b91f4c2d65e014cd368d
   oj (3.16.9) sha256=6fc5c153edd88a723e8d4dd3068d3f66faab9ba28a063b4de6d1e5d0b65a3324
