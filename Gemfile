@@ -4,7 +4,7 @@ ruby '3.4.1'
 
 gem "rails", "~> 8.0.0"
 gem "pg", "~> 1.5"
-gem "puma", "6.5.0"
+gem "puma", "6.6.0"
 gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
