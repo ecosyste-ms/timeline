@@ -192,7 +192,7 @@ GEM
       actionview
       octicons (= 19.15.0)
       railties
-    oj (3.16.9)
+    oj (3.16.10)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
     open-uri (0.5.0)
@@ -441,7 +441,7 @@ CHECKSUMS
   nokogiri (1.18.3-x86_64-linux-musl) sha256=8aaecc22c0e5f12dac613e15f9a04059c3ec859d6f98f493cc831bd88fe8e731
   octicons (19.15.0) sha256=741b4221bacab6c8977ea8fd7c62f7450de233223d8af103b6320ca300652368
   octicons_helper (19.15.0) sha256=cc7bfb4b7095e56965bcb40d686a7d213173239cfdfa013390210a4919a3fbcd
-  oj (3.16.9) sha256=6fc5c153edd88a723e8d4dd3068d3f66faab9ba28a063b4de6d1e5d0b65a3324
+  oj (3.16.10) sha256=7f26bed974e331e16d579b470b0865010757f6fe6ee30ea9b67df653fbe13d7c
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   ostruct (0.6.1) sha256=09a3fb7ecc1fa4039f25418cc05ae9c82bd520472c5c6a6f515f03e4988cb817
   pagy (9.3.3) sha256=4831418eb4ec7cc5658ea57de559cc3a960286db36f98d4c1c65e19db0e2bb60
