@@ -187,10 +187,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.3-x86_64-linux-musl)
       racc (~> 1.4)
-    octicons (19.15.0)
-    octicons_helper (19.15.0)
+    octicons (19.15.1)
+    octicons_helper (19.15.1)
       actionview
-      octicons (= 19.15.0)
+      octicons (= 19.15.1)
       railties
     oj (3.16.9)
       bigdecimal (>= 3.0)
@@ -217,7 +217,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.10)
+    rack (3.1.11)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-attack-rate-limit (1.1.0)
@@ -311,7 +311,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uri (1.0.2)
+    uri (1.0.3)
     useragent (0.16.11)
     webmock (3.25.0)
       addressable (>= 2.8.0)
@@ -439,8 +439,8 @@ CHECKSUMS
   nokogiri (1.18.3-arm64-darwin) sha256=ce088965cd424b8e752d82087dcf017069d55791f157098ed1f671d966857610
   nokogiri (1.18.3-x86_64-linux-gnu) sha256=3c7ad5cee39855ed9c746065f39b584b9fd2aaff61df02d0f85ba8d671bbe497
   nokogiri (1.18.3-x86_64-linux-musl) sha256=8aaecc22c0e5f12dac613e15f9a04059c3ec859d6f98f493cc831bd88fe8e731
-  octicons (19.15.0) sha256=741b4221bacab6c8977ea8fd7c62f7450de233223d8af103b6320ca300652368
-  octicons_helper (19.15.0) sha256=cc7bfb4b7095e56965bcb40d686a7d213173239cfdfa013390210a4919a3fbcd
+  octicons (19.15.1) sha256=12aa8958f73e2891baea61d0478ea87a10782e92ca4d12f3821a193d705e1871
+  octicons_helper (19.15.1) sha256=3ae142da7a9d62eba94f9b94e99d1f7844ea52bcf87af9104cb73fd2296e6f8c
   oj (3.16.9) sha256=6fc5c153edd88a723e8d4dd3068d3f66faab9ba28a063b4de6d1e5d0b65a3324
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   ostruct (0.6.1) sha256=09a3fb7ecc1fa4039f25418cc05ae9c82bd520472c5c6a6f515f03e4988cb817
@@ -455,7 +455,7 @@ CHECKSUMS
   public_suffix (6.0.1) sha256=61d44e1cab5cbbbe5b31068481cf16976dd0dc1b6b07bd95617ef8c5e3e00c6f
   puma (6.6.0) sha256=f25c06873eb3d5de5f0a4ebc783acc81a4ccfe580c760cfe323497798018ad87
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
-  rack (3.1.10) sha256=5e873127d04704c8121528b1ce04c551b5493a78291cace896b059a2a44bcb12
+  rack (3.1.11) sha256=2b1111a754890d57e7bccefe3a8be28c0f9c02b43433b5a1276c07773e16e8f7
   rack-attack (6.7.0) sha256=3ca47e8f66cd33b2c96af53ea4754525cd928ed3fa8da10ee6dad0277791d77c
   rack-attack-rate-limit (1.1.0) sha256=04bbe6985406ac30b5aba03ca662b7f90cc02dca626f7c2d9c512c4efe323a69
   rack-cors (2.0.2) sha256=415d4e1599891760c5dc9ef0349c7fecdf94f7c6a03e75b2e7c2b54b82adda1b
@@ -490,7 +490,7 @@ CHECKSUMS
   timeout (0.4.3) sha256=9509f079b2b55fe4236d79633bd75e34c1c1e7e3fb4b56cb5fda61f80a0fe30e
   typhoeus (1.4.1) sha256=1c17db8364bd45ab302dc61e460173c3e69835896be88a3df07c206d5c55ef7c
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
-  uri (1.0.2) sha256=b303504ceb7e5905771fa7fa14b649652fa949df18b5880d69cfb12494791e27
+  uri (1.0.3) sha256=e9f2244608eea2f7bc357d954c65c910ce0399ca5e18a7a29207ac22d8767011
   useragent (0.16.11) sha256=700e6413ad4bb954bb63547fa098dddf7b0ebe75b40cc6f93b8d54255b173844
   webmock (3.25.0) sha256=573c23fc4887008c830f22da588db339ca38b6d59856fd57f5a068959474198e
   websocket-driver (0.7.7) sha256=056d99f2cd545712cfb1291650fde7478e4f2661dc1db6a0fa3b966231a146b4
