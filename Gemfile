@@ -13,7 +13,7 @@ gem 'open-uri'
 gem 'bootstrap', '~> 5.3.1'
 gem 'chartkick'
 gem 'octicons_helper'
-gem 'local_time', '2.1.0'
+gem 'local_time', '3.0.3'
 gem "rack-attack"
 gem "rack-attack-rate-limit", require: "rack/attack/rate-limit"
 gem 'rack-cors'
