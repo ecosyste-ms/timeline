@@ -109,7 +109,7 @@ class Event < ApplicationRecord
       faraday.adapter :typhoeus
     end
     
-    manager = Typhoeus::Hydra.new(:max_concurrency => 50)
+    manager = Typhoeus::Hydra.new(:max_concurrency => 20)
 
     conn.in_parallel(manager) do
       names.each do |name|
