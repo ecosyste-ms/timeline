@@ -199,7 +199,7 @@ GEM
       stringio
       time
       uri
-    ostruct (0.6.1)
+    ostruct (0.6.2)
     pagy (9.3.4)
     pg (1.5.9)
     pg_query (6.1.0)
@@ -446,7 +446,7 @@ CHECKSUMS
   octicons_helper (19.15.2) sha256=91f4ee02abb9fb5de77c5824816c1d396a9bbeff835c8dbec41690f2fa357297
   oj (3.16.11) sha256=2aab609d2bc896529bd3c70d737f591c13932a640ba6164a0f7e414efdb052b1
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
-  ostruct (0.6.1) sha256=09a3fb7ecc1fa4039f25418cc05ae9c82bd520472c5c6a6f515f03e4988cb817
+  ostruct (0.6.2) sha256=6d7302a299e400a2c248d6ce0dad18fc3a5714e8096facc25ffd0c54ee57cfc0
   pagy (9.3.4) sha256=b058e064bd02237e76d591e90fadc02c795426dd51f90d0c51089558bf3ab5f7
   pg (1.5.9) sha256=761efbdf73b66516f0c26fcbe6515dc7500c3f0aa1a1b853feae245433c64fdc
   pg_query (6.1.0) sha256=8b005229e209f12c5887c34c60d0eb2a241953b9475b53a9840d24578532481e
