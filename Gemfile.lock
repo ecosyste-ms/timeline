@@ -74,7 +74,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    appsignal (4.5.15)
+    appsignal (4.5.16)
       logger
       rack (>= 2.0.0)
     base64 (0.3.0)
@@ -187,10 +187,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
-    octicons (19.15.2)
-    octicons_helper (19.15.2)
+    octicons (19.15.3)
+    octicons_helper (19.15.3)
       actionview
-      octicons (= 19.15.2)
+      octicons (= 19.15.3)
       railties
     oj (3.16.11)
       bigdecimal (>= 3.0)
@@ -381,7 +381,7 @@ CHECKSUMS
   activestorage (8.0.2) sha256=f83d221e0f06ae38f2200e55490bd155c76d0add330f6e300e8646048d672977
   activesupport (8.0.2) sha256=8565cddba31b900cdc17682fd66ecd020441e3eef320a9930285394e8c07a45e
   addressable (2.8.7) sha256=462986537cf3735ab5f3c0f557f14155d778f4b43ea4f485a9deb9c8f7c58232
-  appsignal (4.5.15) sha256=9a60f135f17c0ad62ca29b06761566757fbe3355e2199415ce22a9590b253c2e
+  appsignal (4.5.16) sha256=ba13780b25f3f6a77826b53280afd98dec985374281a5c7f8ce22d29c471bd9d
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   benchmark (0.4.1) sha256=d4ef40037bba27f03b28013e219b950b82bace296549ec15a78016552f8d2cce
   bigdecimal (3.2.2) sha256=39085f76b495eb39a79ce07af716f3a6829bc35eb44f2195e2753749f2fa5adc
@@ -442,8 +442,8 @@ CHECKSUMS
   nokogiri (1.18.8-arm64-darwin) sha256=483b5b9fb33653f6f05cbe00d09ea315f268f0e707cfc809aa39b62993008212
   nokogiri (1.18.8-x86_64-linux-gnu) sha256=4a747875db873d18a2985ee2c320a6070c4a414ad629da625fbc58d1a20e5ecc
   nokogiri (1.18.8-x86_64-linux-musl) sha256=ddd735fba49475a395b9ea793bb6474e3a3125b89960339604d08a5397de1165
-  octicons (19.15.2) sha256=afe1f6c512dfdcae25dcc71d1a2fce516f2c6e7659e35c15cd0e25754d5749c9
-  octicons_helper (19.15.2) sha256=91f4ee02abb9fb5de77c5824816c1d396a9bbeff835c8dbec41690f2fa357297
+  octicons (19.15.3) sha256=fbf3d672e81db07c5529a438a298e11c14f5af3421c97089fb5154a11494d4c1
+  octicons_helper (19.15.3) sha256=27855f5b8841318e0e88ab896cd32aa03ca433a26b3e6e1c2ea5274d254caf19
   oj (3.16.11) sha256=2aab609d2bc896529bd3c70d737f591c13932a640ba6164a0f7e414efdb052b1
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   ostruct (0.6.2) sha256=6d7302a299e400a2c248d6ce0dad18fc3a5714e8096facc25ffd0c54ee57cfc0
