@@ -107,6 +107,7 @@ class Event < ApplicationRecord
 
     conn = Faraday.new(:url => "https://repos.ecosyste.ms") do |faraday|
       faraday.adapter :typhoeus
+      faraday.headers['User-Agent'] = 'timeline.ecosyste.ms'
     end
     
     manager = Typhoeus::Hydra.new(:max_concurrency => 20)
