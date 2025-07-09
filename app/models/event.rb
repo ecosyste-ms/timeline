@@ -61,7 +61,7 @@ class Event < ApplicationRecord
       ends = Time.now
       puts "Finished: #{ends - starts} seconds"
       Import.create(filename: filename, event_count: count)
-      ping_repos(repo_names.to_a)
+      # ping_repos(repo_names.to_a)
     rescue Oj::ParseError
       puts "Invalid JSON in #{filename}"
     end
