@@ -3,8 +3,8 @@ source "https://rubygems.org"
 ruby '3.4.5'
 
 gem "rails", "~> 8.0.0"
-gem "pg", "~> 1.5"
-gem "puma", "6.6.0"
+gem "pg"
+gem "puma"
 gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
