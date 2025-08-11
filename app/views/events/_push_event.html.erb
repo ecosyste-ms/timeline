@@ -1,11 +1,11 @@
 <ul>
-  <% event.payload['commits'].each do |commit| %>
+  <% event.payload['commits']&.each do |commit| %>
     <li>
       <%= truncate commit['message'], length: 120 %> <small class='text-muted'><%= link_to commit['sha'][0..6], "https://github.com/#{event.repository}/commit/#{commit['sha']}", class: 'link-secondary' %></small>
     </li>
   <% end %>
-  <% if event.payload['commits'].length != event.payload['size'] %>
-    <li>and <%= event.payload['size'] - event.payload['commits'].length %> more ...</li>
+  <% if event.payload['commits']&.length != event.payload['size'] %>
+    <li>and <%= event.payload['size'] - event.payload['commits']&.length.to_i %> more ...</li>
   <% end %>
 </ul>
 
