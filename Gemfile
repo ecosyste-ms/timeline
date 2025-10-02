@@ -35,10 +35,6 @@ gem "sprockets-rails"
 gem "sassc-rails"
 gem 'ostruct'
 
-group :development do
-  gem 'sql_queries_count'
-end
-
 group :test do
   gem "shoulda"
   gem "webmock"
