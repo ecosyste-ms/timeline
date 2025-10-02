@@ -2,7 +2,13 @@ source "https://rubygems.org"
 
 ruby '3.4.6'
 
-gem "rails", "~> 8.0.0"
+# Rails components
+gem "activemodel", "~> 8.0.0"
+gem "activerecord", "~> 8.0.0"
+gem "actionpack", "~> 8.0.0"
+gem "actionview", "~> 8.0.0"
+gem "railties", "~> 8.0.0"
+gem "activesupport", "~> 8.0.0"
 
 gem "secure_headers"
 gem "pg"
@@ -40,4 +46,4 @@ group :test do
   gem "rails-controller-testing"
 end
 
-gem "bootstrap-icons-helper", "~> 2.0"
+gem "bootstrap-icons", require: "bootstrap_icons"
