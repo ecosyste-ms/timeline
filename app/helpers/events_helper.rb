@@ -54,6 +54,8 @@ module EventsHelper
       'person-add'
     when 'DiscussionEvent'
       'comment-discussion'
+    when 'DiscussionCommentEvent'
+      'comment'
     else
       nil
     end
@@ -94,6 +96,8 @@ module EventsHelper
       'Wiki update'
     when 'DiscussionEvent'
       'Discussion'
+    when 'DiscussionCommentEvent'
+      'Discussion Comment'
     else
       "*#{event_type}*"
     end

@@ -125,4 +125,24 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     get events_url(event_type: 'DiscussionEvent')
     assert_response :success
   end
+
+  test 'renders user events with DiscussionCommentEvent' do
+    discussion_comment_event = Event.create({"id"=>19885440327,
+      "actor"=>"testuser2",
+      "event_type"=>"DiscussionCommentEvent",
+      "repository"=>"testuser2/testrepo",
+      "owner"=>"testuser2",
+      "payload"=>{
+        "action"=>"created",
+        "comment"=>{
+          "body"=>"This is a test comment on a discussion",
+          "html_url"=>"https://github.com/testuser2/testrepo/discussions/1#discussioncomment-123"
+        }
+      },
+      "created_at"=>Time.now})
+
+    get user_path("testuser2")
+    assert_response :success
+    assert_template 'events/user'
+  end
 end

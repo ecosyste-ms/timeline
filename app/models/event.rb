@@ -157,6 +157,8 @@ class Event < ApplicationRecord
       payload['pages'].first['html_url']
     when 'DiscussionEvent'
       payload['discussion']['html_url']
+    when 'DiscussionCommentEvent'
+      payload['comment']['html_url']
     end
   end
 
@@ -211,6 +213,8 @@ class Event < ApplicationRecord
       else
         "#{payload['action']} a discussion on"
       end
+    when 'DiscussionCommentEvent'
+      "#{payload['action']} a comment on a discussion on"
     end
   end
 end
