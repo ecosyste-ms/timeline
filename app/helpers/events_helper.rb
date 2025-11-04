@@ -52,6 +52,8 @@ module EventsHelper
       'repo-forked'
     when 'MemberEvent'
       'person-add'
+    when 'DiscussionEvent'
+      'comment-discussion'
     else
       nil
     end
@@ -90,6 +92,8 @@ module EventsHelper
       'Member'
     when 'GollumEvent'
       'Wiki update'
+    when 'DiscussionEvent'
+      'Discussion'
     else
       "*#{event_type}*"
     end

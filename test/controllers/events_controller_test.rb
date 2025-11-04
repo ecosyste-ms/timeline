@@ -9,6 +9,21 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
       "owner"=>"Zahabul",
       "payload"=>{"ref"=>"main", "ref_type"=>"branch", "master_branch"=>"main", "description"=>nil, "pusher_type"=>"user"},
       "created_at"=>Time.now})
+
+    @discussion_event = Event.create({"id"=>19885440326,
+      "actor"=>"testuser",
+      "event_type"=>"DiscussionEvent",
+      "repository"=>"testuser/testrepo",
+      "owner"=>"testuser",
+      "payload"=>{
+        "action"=>"created",
+        "discussion"=>{
+          "title"=>"Test Discussion",
+          "body"=>"This is a test discussion",
+          "html_url"=>"https://github.com/testuser/testrepo/discussions/1"
+        }
+      },
+      "created_at"=>Time.now})
   end
 
   test 'should get index' do
@@ -98,5 +113,16 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   test 'user loads events in controller' do
     get user_path("Zahabul")
     assert assigns(:events).loaded?
+  end
+
+  test 'renders user events with DiscussionEvent' do
+    get user_path("testuser")
+    assert_response :success
+    assert_template 'events/user'
+  end
+
+  test 'index with DiscussionEvent type parameter' do
+    get events_url(event_type: 'DiscussionEvent')
+    assert_response :success
   end
 end

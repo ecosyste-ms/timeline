@@ -155,6 +155,8 @@ class Event < ApplicationRecord
       "https://github.com/#{payload['member']['login']}"
     when 'GollumEvent'
       payload['pages'].first['html_url']
+    when 'DiscussionEvent'
+      payload['discussion']['html_url']
     end
   end
 
@@ -202,6 +204,13 @@ class Event < ApplicationRecord
       "#{payload['action']} #{payload['member']['login']} to"
     when 'GollumEvent'
       "#{payload['pages'].first['action']} a wiki page on"
+    when 'DiscussionEvent'
+      case payload['action']
+      when 'answered'
+        'answered a discussion on'
+      else
+        "#{payload['action']} a discussion on"
+      end
     end
   end
 end

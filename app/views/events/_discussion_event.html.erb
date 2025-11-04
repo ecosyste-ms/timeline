@@ -1,0 +1,7 @@
+<% if event.payload['discussion'].present? %>
+  <h6>
+    <%= link_to event.payload['discussion']['title'], event.payload['discussion']['html_url'], target: :_blank %>
+  </h6>
+
+  <%= truncate event.payload['discussion']['body'], length: 200 %>
+<% end %>
