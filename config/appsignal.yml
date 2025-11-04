@@ -3,4 +3,5 @@ production:
     - ActiveRecord::RecordNotFound
     - ActionController::RoutingError
     - ActiveRecord::QueryCanceled
+    - PG::QueryCanceled
     - Rack::Timeout::RequestTimeoutException

@@ -14,7 +14,7 @@ class EventsController < ApplicationController
       @scope = @scope.where('events.id > ?', params[:after])
     end
 
-    @events = @scope.order('id DESC')
+    @events = @scope.order('id DESC').load
     expires_in 1.hour, public: true
   end
 
@@ -38,6 +38,8 @@ class EventsController < ApplicationController
     if params[:before]
       @events = @events.where('events.id < ?', params[:before]).order('id DESC')
     end
+
+    @events = @events.load
     expires_in 1.hour, public: true
   end
 
@@ -58,6 +60,8 @@ class EventsController < ApplicationController
     if params[:before]
       @events = @events.where('events.id < ?', params[:before]).order('id DESC')
     end
+
+    @events = @events.load
     expires_in 1.hour, public: true
   end
 end
