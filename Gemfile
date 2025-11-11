@@ -16,7 +16,7 @@ gem "puma"
 gem "jbuilder"
 gem "bootsnap", require: false
 gem 'oj'
-gem "pagy", "~> 9.4.0"
+gem "pagy", "~> 43.0.2"
 gem 'open-uri'
 gem 'bootstrap', '~> 5.3.1'
 gem 'chartkick'
