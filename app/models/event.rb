@@ -68,12 +68,13 @@ class Event < ApplicationRecord
   end
 
   def self.format_event(event_json)
+    repo_name = event_json.dig('repo', 'name')
     {
       id: event_json['id'],
-      actor: event_json['actor']['login'],
+      actor: event_json.dig('actor', 'login'),
       event_type: event_json['type'],
-      repository: event_json['repo']['name'],
-      owner: event_json['repo']['name'].split('/')[0],
+      repository: repo_name,
+      owner: repo_name&.split('/')&.first,
       payload: event_json['payload'],
       created_at: event_json['created_at']
     }
