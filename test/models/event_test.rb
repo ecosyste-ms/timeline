@@ -39,4 +39,51 @@ class EventTest < ActiveSupport::TestCase
     })
     assert_equal 'https://github.com/owner/repo/discussions/123#discussioncomment-456', event.html_url
   end
+
+  test "format_event extracts fields from event json" do
+    event_json = {
+      'id' => '12345',
+      'actor' => {'login' => 'testuser'},
+      'type' => 'PushEvent',
+      'repo' => {'name' => 'owner/repo'},
+      'payload' => {'commits' => []},
+      'created_at' => '2025-01-01T00:00:00Z'
+    }
+    result = Event.format_event(event_json)
+
+    assert_equal '12345', result[:id]
+    assert_equal 'testuser', result[:actor]
+    assert_equal 'PushEvent', result[:event_type]
+    assert_equal 'owner/repo', result[:repository]
+    assert_equal 'owner', result[:owner]
+  end
+
+  test "format_event handles nil repo name" do
+    event_json = {
+      'id' => '12345',
+      'actor' => {'login' => 'testuser'},
+      'type' => 'PushEvent',
+      'repo' => {'name' => nil},
+      'payload' => {},
+      'created_at' => '2025-01-01T00:00:00Z'
+    }
+    result = Event.format_event(event_json)
+
+    assert_nil result[:repository]
+    assert_nil result[:owner]
+  end
+
+  test "format_event handles missing repo key" do
+    event_json = {
+      'id' => '12345',
+      'actor' => {'login' => 'testuser'},
+      'type' => 'PushEvent',
+      'payload' => {},
+      'created_at' => '2025-01-01T00:00:00Z'
+    }
+    result = Event.format_event(event_json)
+
+    assert_nil result[:repository]
+    assert_nil result[:owner]
+  end
 end
