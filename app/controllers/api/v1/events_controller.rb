@@ -12,7 +12,6 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     end
 
     @pagy, @events = pagy_countless(@scope)
-    expires_in 1.hour, public: true
   end
 
   def show
@@ -32,7 +31,6 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     end
 
     @pagy, @events = pagy_countless(@scope)
-    expires_in 1.hour, public: true
   end
 
   def summary
@@ -56,7 +54,6 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     end
 
     render json: @scope.group(:event_type).count
-    expires_in 1.day, public: true
   end
 
   def repository_names
@@ -73,7 +70,6 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     @names = events.map(&:repository).uniq
     @newest = events.first
     @oldest = events.last
-    expires_in 1.hour, public: true
   end
 
   def user
@@ -93,7 +89,6 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     end
 
     @pagy, @events = pagy_countless(@scope)
-    expires_in 1.hour, public: true
     render :show
   end
   
@@ -118,6 +113,5 @@ class Api::V1::EventsController < Api::V1::ApplicationController
     end
 
     render json: @scope.group(:event_type).count
-    expires_in 1.day, public: true
   end
 end

@@ -15,7 +15,6 @@ class EventsController < ApplicationController
     end
 
     @events = @scope.order('id DESC').load
-    expires_in 1.hour, public: true
   end
 
   def show
@@ -40,7 +39,6 @@ class EventsController < ApplicationController
     end
 
     @events = @events.load
-    expires_in 1.hour, public: true
   end
 
   def user
@@ -62,6 +60,5 @@ class EventsController < ApplicationController
     end
 
     @events = @events.load
-    expires_in 1.hour, public: true
   end
 end
