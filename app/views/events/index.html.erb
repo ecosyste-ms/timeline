@@ -1,3 +1,8 @@
+<% content_for :head do %>
+  <%= auto_discovery_link_tag(:rss, events_url(event_type: params[:event_type], format: :rss), title: "Recent Events RSS") %>
+  <%= auto_discovery_link_tag(:atom, events_url(event_type: params[:event_type], format: :atom), title: "Recent Events Atom") %>
+<% end %>
+
 <div class="px-4 pt-2 mb-5 text-center">
   <h1 class="display-5 fw-bold">
     Recent <%= params[:event_type].try(:titleize) || 'Event' %>s

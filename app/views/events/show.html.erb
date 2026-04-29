@@ -1,3 +1,8 @@
+<% content_for :head do %>
+  <%= auto_discovery_link_tag(:rss, event_url(@repository, year: @year.year, event_type: params[:event_type], format: :rss), title: "#{@repository} Events RSS") %>
+  <%= auto_discovery_link_tag(:atom, event_url(@repository, year: @year.year, event_type: params[:event_type], format: :atom), title: "#{@repository} Events Atom") %>
+<% end %>
+
 <div class="px-4 pt-2 mb-5 text-center">
   <h1 class="display-5 fw-bold">
     <%= link_to "https://github.com/#{@repository.split('/').first}", target: :_blank do %>
