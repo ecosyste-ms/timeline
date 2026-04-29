@@ -32,6 +32,59 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_template 'events/index'
   end
 
+
+  test 'index provides RSS and Atom auto discovery links' do
+    get events_url
+
+    assert_response :success
+    assert_select 'link[rel="alternate"][type="application/rss+xml"][href=?]', events_url(format: :rss)
+    assert_select 'link[rel="alternate"][type="application/atom+xml"][href=?]', events_url(format: :atom)
+  end
+
+  test 'renders index RSS feed' do
+    get events_url(format: :rss)
+
+    assert_response :success
+    assert_equal 'application/rss+xml', response.media_type
+    assert_includes response.body, '<rss'
+    assert_includes response.body, @event.repository
+  end
+
+  test 'renders index Atom feed' do
+    get events_url(format: :atom)
+
+    assert_response :success
+    assert_equal 'application/atom+xml', response.media_type
+    assert_includes response.body, '<feed'
+    assert_includes response.body, @event.repository
+  end
+
+  test 'repository page provides RSS and Atom auto discovery links' do
+    get event_path("Zahabul/humescores")
+
+    assert_response :success
+    assert_select 'link[rel="alternate"][type="application/rss+xml"]'
+    assert_select 'link[rel="alternate"][type="application/atom+xml"]'
+  end
+
+  test 'renders repository RSS feed' do
+    get event_path("Zahabul/humescores", format: :rss)
+
+    assert_response :success
+    assert_equal 'application/rss+xml', response.media_type
+    assert_includes response.body, '<rss'
+    assert_includes response.body, @event.repository
+  end
+
+  test 'renders repository Atom feed' do
+    get event_path("Zahabul/humescores", format: :atom)
+
+    assert_response :success
+    assert_equal 'application/atom+xml', response.media_type
+    assert_includes response.body, '<feed'
+    assert_includes response.body, @event.repository
+  end
+
   test 'renders show' do
     get event_path("Zahabul/humescores")
     assert_response :success

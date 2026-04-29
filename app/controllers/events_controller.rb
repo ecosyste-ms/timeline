@@ -15,6 +15,12 @@ class EventsController < ApplicationController
     end
 
     @events = @scope.order('id DESC').load
+
+    respond_to do |format|
+      format.html
+      format.rss
+      format.atom
+    end
   end
 
   def show
@@ -39,6 +45,12 @@ class EventsController < ApplicationController
     end
 
     @events = @events.load
+
+    respond_to do |format|
+      format.html
+      format.rss
+      format.atom
+    end
   end
 
   def user
