@@ -128,10 +128,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
-    octicons (19.29.2)
-    octicons_helper (19.29.2)
+    octicons (19.32.0)
+    octicons_helper (19.32.0)
       actionview
-      octicons (= 19.29.2)
+      octicons (= 19.32.0)
       railties
     oj (3.17.4)
       bigdecimal (>= 3.0)
@@ -357,8 +357,8 @@ CHECKSUMS
   nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
-  octicons (19.29.2) sha256=59c737cda7f096490cb2902e3a8460990a36fc0f61e6314bfc8b11a18d7f0b0b
-  octicons_helper (19.29.2) sha256=9f983b98611d5ef4e2e10c7e6496a9ff019cdbeaf324095ff18ca01975ccf745
+  octicons (19.32.0) sha256=63c5c8c275f1df236c86225efc0f9c8e909f5a8742e27a0dedab934b19eefdc4
+  octicons_helper (19.32.0) sha256=712819d656316421b17abe654b2bec365ca57bda7ea9e945bcd398f540efd9cd
   oj (3.17.4) sha256=733fe3bcb7a5d985bd2e943620b7bea1bffb2809318af7021c841b833a6858e1
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
