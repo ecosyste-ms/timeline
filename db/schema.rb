@@ -10,26 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_06_123035) do
+ActiveRecord::Schema[8.1].define(version: 2026_08_17_120000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.string "actor"
+    t.datetime "created_at", null: false
     t.string "event_type"
-    t.string "repository"
     t.string "owner"
     t.json "payload", default: "{}", null: false
-    t.datetime "created_at", null: false
+    t.string "repository"
     t.index ["actor"], name: "index_events_on_actor"
     t.index ["created_at"], name: "index_events_on_created_at", using: :brin
     t.index ["repository"], name: "index_events_on_repository"
   end
 
-  create_table "imports", force: :cascade do |t|
-    t.string "filename"
-    t.integer "event_count"
+  create_table "hidden_users", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.string "login", null: false
+    t.datetime "updated_at", null: false
+    t.index ["login"], name: "index_hidden_users_on_login", unique: true
+  end
+
+  create_table "imports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.integer "event_count"
+    t.string "filename"
     t.datetime "updated_at", null: false
   end
 end

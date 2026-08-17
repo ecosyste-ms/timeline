@@ -55,6 +55,23 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_template 'events/user'
   end
 
+  test 'hidden user is not available' do
+    HiddenUser.create!(login: "zahabul")
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get user_path("ZAHABUL")
+    end
+  end
+
+  test 'index excludes hidden user events' do
+    HiddenUser.create!(login: "zahabul")
+
+    get events_url
+
+    assert_not_includes assigns(:events), @event
+    assert_includes assigns(:events), @discussion_event
+  end
+
   test 'renders user events with year parameter' do
     get user_path("Zahabul", year: 2024)
     assert_response :success

@@ -1,4 +1,15 @@
 class Event < ApplicationRecord
+  scope :visible, -> {
+    where(<<~SQL.squish)
+      NOT EXISTS (
+        SELECT 1
+        FROM hidden_users
+        WHERE hidden_users.login = lower(events.actor)
+           OR hidden_users.login = lower(events.owner)
+      )
+    SQL
+  }
+
   def self.import_from_folder(folder_path)
     starts = Time.now
     Dir["#{folder_path}/*.json.gz"].each do |path|
@@ -45,10 +56,14 @@ class Event < ApplicationRecord
     batch_size = 2000
     events = []
     repo_names = Set.new
+    hidden_logins = HiddenUser.pluck(:login).to_set
     count = 0
     begin
       Oj.load(js) do |event_json|
-        events << Event.format_event(event_json)
+        event = Event.format_event(event_json)
+        next if Event.hidden_event?(event, hidden_logins)
+
+        events << event
         repo_names << event_json['repo']['name'] if pingable_event_types.include?(event_json['type'])
         if events.length >= batch_size
           count += 1
@@ -78,6 +93,10 @@ class Event < ApplicationRecord
       payload: event_json['payload'],
       created_at: event_json['created_at']
     }
+  end
+
+  def self.hidden_event?(event, hidden_logins = HiddenUser.pluck(:login).to_set)
+    hidden_logins.include?(event[:actor]&.downcase) || hidden_logins.include?(event[:owner]&.downcase)
   end
 
   def self.download_last_day

@@ -1,6 +1,6 @@
 class Api::V1::EventsController < Api::V1::ApplicationController
   def index
-    @scope = Event.order('id DESC')
+    @scope = Event.visible.order('id DESC')
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
 
     if params[:before].present?
@@ -16,10 +16,10 @@ class Api::V1::EventsController < Api::V1::ApplicationController
 
   def show
     @repository = params[:id]
-    first_event = Event.where(repository: @repository).first
+    first_event = Event.visible.where(repository: @repository).first
     raise ActiveRecord::RecordNotFound if first_event.nil?
 
-    @scope = Event.where(repository: @repository).order('id DESC')
+    @scope = Event.visible.where(repository: @repository).order('id DESC')
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
 
     if params[:before].present?
@@ -35,7 +35,7 @@ class Api::V1::EventsController < Api::V1::ApplicationController
 
   def summary
     @repository = params[:id]
-    @scope = Event.where(repository: @repository)
+    @scope = Event.visible.where(repository: @repository)
 
     if params[:year]
       @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
@@ -57,7 +57,7 @@ class Api::V1::EventsController < Api::V1::ApplicationController
   end
 
   def repository_names
-    events = Event.order('id DESC').limit(10000).select(:id, :created_at, :repository)
+    events = Event.visible.order('id DESC').limit(10000).select(:id, :created_at, :repository)
 
     if params[:before].present?
       events = events.where('events.id < ?', params[:before])
@@ -74,10 +74,10 @@ class Api::V1::EventsController < Api::V1::ApplicationController
 
   def user
     @actor = params[:id]
-    first_event = Event.where(actor: @actor).first
+    first_event = Event.visible.where(actor: @actor).first
     raise ActiveRecord::RecordNotFound if first_event.nil?
 
-    @scope = Event.where(actor: @actor).order('id DESC')
+    @scope = Event.visible.where(actor: @actor).order('id DESC')
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
 
     if params[:before].present?
@@ -94,7 +94,9 @@ class Api::V1::EventsController < Api::V1::ApplicationController
   
   def user_summary
     @actor = params[:id]
-    @scope = Event.where(actor: @actor)
+    raise ActiveRecord::RecordNotFound if HiddenUser.hidden?(@actor)
+
+    @scope = Event.visible.where(actor: @actor)
 
     if params[:year]
       @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
