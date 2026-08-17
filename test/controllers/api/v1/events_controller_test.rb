@@ -19,6 +19,23 @@ class ApiV1EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal actual_response.length, 1
   end
 
+  test 'index excludes hidden user events' do
+    HiddenUser.create!(login: "zahabul")
+
+    get api_v1_events_path
+
+    assert_response :success
+    assert_empty JSON.parse(@response.body)
+  end
+
+  test 'hidden user summary is not available' do
+    HiddenUser.create!(login: "zahabul")
+
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get api_v1_user_summary_path("ZAHABUL")
+    end
+  end
+
   test 'renders show' do
     get api_v1_event_path("Zahabul/humescores")
     assert_response :success

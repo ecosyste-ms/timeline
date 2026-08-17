@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     redirect_to event_path(params[:id]) if params[:id].present?
 
     @title = "Recent #{params[:event_type].try(:titleize) || 'Event'}s - Ecosyste.ms: Timeline"
-    @scope = Event.order('id DESC').limit(30)
+    @scope = Event.visible.order('id DESC').limit(30)
     @scope = @scope.where(event_type: params[:event_type]) if params[:event_type].present?
 
     if params[:before].present?
@@ -20,10 +20,10 @@ class EventsController < ApplicationController
   def show
     @repository = params[:id]
     
-    first_event = Event.where(repository: @repository).first
+    first_event = Event.visible.where(repository: @repository).first
     raise ActiveRecord::RecordNotFound if first_event.nil?
 
-    @events = Event.where(repository: @repository).order('id DESC').limit(30)
+    @events = Event.visible.where(repository: @repository).order('id DESC').limit(30)
 
     @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
     @title = @repository + " Events in #{@year.year} - Ecosyste.ms: Timeline"
@@ -43,7 +43,9 @@ class EventsController < ApplicationController
 
   def user
     @actor = params[:id]
-    @events = Event.where(actor: @actor).order('id DESC').limit(30)
+    raise ActiveRecord::RecordNotFound if HiddenUser.hidden?(@actor)
+
+    @events = Event.visible.where(actor: @actor).order('id DESC').limit(30)
 
     @year = DateTime.parse("#{params[:year]}/1/1") rescue Time.now.year
     @title = @actor + " Events in #{@year.year} - Ecosyste.ms: Timeline"
