@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '4.0.6'
+ruby '4.0.7'
 
 # Rails components
 gem "activemodel", "~> 8.1.1"
