@@ -110,7 +110,6 @@ GEM
     loofah (2.25.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
@@ -123,9 +122,6 @@ GEM
     net-protocol (0.4.0)
       timeout
     nio4r (2.7.5)
-    nokogiri (1.19.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.4-arm-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-arm-linux-musl)
@@ -136,10 +132,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
-    octicons (19.40.0)
-    octicons_helper (19.40.0)
+    octicons (19.42.0)
+    octicons_helper (19.42.0)
       actionview
-      octicons (= 19.40.0)
+      octicons (= 19.42.0)
       railties
     oj (3.17.7)
       bigdecimal (>= 3.0)
@@ -356,21 +352,19 @@ CHECKSUMS
   local_time (2.1.0) sha256=cd3636575d9b499f33ab53e1b38feb37dbfe1f57be58aad6e702061d4f12c5a4
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   loofah (2.25.2) sha256=2007f746959ac65552456e04b433e83deb22759ab38c838b4445c70e43425918
-  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   minitest (6.0.6) sha256=153ea36d1d987a62942382b61075745042a2b3123b1cd48f4c3675af9cc7d6f1
   mocha (3.1.0) sha256=75f42d69ebfb1f10b32489dff8f8431d37a418120ecdfc07afe3bc183d4e1d56
   msgpack (1.8.5) sha256=97419eaa7b35dfe3e462c0e6c1a3dfdcbfc8756605c09e46e4c6daef127517ba
   net-http (0.10.0) sha256=1a2ff6e37a05724973c43f2bf7bf105f59c36a4cd0a7e9b1c021a0a566987c27
   net-protocol (0.4.0) sha256=f9f90c8c6f64794a45160bf422177a336db12809de3beeeaa26b88fcd2e8c853
   nio4r (2.7.5) sha256=6c90168e48fb5f8e768419c93abb94ba2b892a1d0602cb06eef16d8b7df1dca1
-  nokogiri (1.19.4) sha256=50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5
   nokogiri (1.19.4-arm-linux-gnu) sha256=a301313e38bb065d68239e79734bcd6f56fb6efaacebde29e9abf2a4735340ca
   nokogiri (1.19.4-arm-linux-musl) sha256=588923c101bcfa78869734d247d25b598674323e7f22474fc468f6e5647311eb
   nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
-  octicons (19.40.0) sha256=c017097ba8addc1a67a3afa67456a6ed8a337ad026817955582564eb552a98c7
-  octicons_helper (19.40.0) sha256=c25bc6aabd1e32a2bcf2a829ce4a11e518655000a4b40679be4f0f63bebb6da6
+  octicons (19.42.0) sha256=021b709379a0191ea1241b8dbd4b8690c74df5d5193c306d1f49611b1f3aa7cb
+  octicons_helper (19.42.0) sha256=9570f0d5834b99dd7613e788899ae1a9611ff9640690a7f06f0870d86cdcc4d3
   oj (3.17.7) sha256=7a21d3ac8e544a850f1cdaf711b0c8144ba587d14d3e4917c0855fd7b0483db7
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
